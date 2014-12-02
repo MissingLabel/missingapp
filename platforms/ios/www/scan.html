@@ -30,6 +30,7 @@
     <body onload="onBodyLoad()" style="background: url(img/ScanditSDKDemo-Splash.png) no-repeat;background-size: 100%;background-color: #000000">
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             function onBodyLoad()
             {
@@ -37,8 +38,11 @@
             }
 
         function success(resultArray) {
-
-        alert("Scanned " + resultArray[0] + " code: " + resultArray[1]);
+                localStorage.setItem('scanResult', resultArray[0]);
+                var url = "index.html?scanResult=" + resultArray[0].toString();
+                // scanResult = resultArray[0];
+                window.location=url;
+        // alert("Scanned " + resultArray[0] + " code: " + resultArray[1]);
 
                 // NOTE: Scandit SDK Phonegap Plugin Versions 1.* for iOS report
                 // the scanning result as a concatenated string.
@@ -49,6 +53,7 @@
                 // If you are running the Scandit SDK Phonegap Plugin Version 1.* for iOS,
                 // use the following approach to generate a result array from the string result returned:
                 // resultArray = result.split("|");
+
             }
 
             function failure(error) {

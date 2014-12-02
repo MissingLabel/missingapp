@@ -159,6 +159,7 @@
         <h1>Location</h1>
         <div id="farm-name">Farm name: <%- locationData.farm_name %></div>
         <h1><%- locationData.farm_geo_location %></h1>
+        <h1></h1>
         <div id="google-map"></div>
 
         <html>
@@ -166,7 +167,7 @@
               width="600"
               height="450"
               frameborder="0" style="border:0"
-              <img src= "https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Chicago+IL&destination="<%-locationData.farm_geo_location.toString()%>>>
+              <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Chicago+IL&destination=<%-locationData.farm_geo_location%>">>
             </iframe>
         </html>
 
