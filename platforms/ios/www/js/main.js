@@ -6,6 +6,7 @@ function makeTemplateProcessor($){
       $("#login-form").css("display", "none");
       $("#create-form").css("display", "none");
       $("#location-data").css("display", "none");
+      $("#produce-profile").css("display", "none");
       $("#" + page).css("display", "block");
   };
 
@@ -72,12 +73,11 @@ function makeTemplateProcessor($){
       $("#produce-profile-template").html()
     );
 
-    var generalData = data;
+    var produceData = data;
 
-    $("#nutrition-facts-label").html(
-      produceProfileTemplate( generalData )
-    )
-  };
+    $("#produce-profile").html(
+      produceProfileTemplate( produceData )
+    )};
 
   return {
     showProduceProfile: showProduceProfile,
@@ -91,6 +91,7 @@ var viewTemplating = makeTemplateProcessor(jQuery);
 
 $(document).on('deviceready', function(){
 
+  var pagePosition = 1;
   var currentProductData;
 
   $("#login-button").click(function(e){
@@ -104,11 +105,9 @@ $(document).on('deviceready', function(){
       type: "POST"
     })
 
-    // var testResponse = true
     request.done(function(response){
       console.log(response.loginSecure);
       if(response.loginSecure === "True"){
-      // if(response === true){
         $("#login-form").css("display", "none");
         $("#create-form").css("display", "none");
         $("#search-form").css("display", "block");
@@ -125,11 +124,6 @@ $(document).on('deviceready', function(){
     $("#create-form").css("display", "none");
     $("#signup-form").css("display", "block");
   });
-
-    // ajax call
-    // if session
-      // hide #login-form
-      // show #search-form view
 
   $("#create-account-button").click(function(e){
     e.preventDefault();
@@ -152,16 +146,9 @@ $(document).on('deviceready', function(){
     });
 
   });
-    // hide #login-form
-    // show #signup-form
-
-  // $("#")
 
   $("#search-button").click(function(e){
     e.preventDefault();
-
-    // showPage("nutrition-facts-label");
-    // $("#nutrition-facts-label").css("display", "block");
     var input = $("#input-field").val();
     console.log(input);
     var request = $.ajax({
@@ -173,11 +160,12 @@ $(document).on('deviceready', function(){
     request.done( function(response){
       $("body").css("background-image", "none");
       $("#search-form").css("display", "none");
-      // $("#nutrition-facts-label").css("display", "block");
       console.log(response);
       console.log("hello");
       currentProductData = response;
       viewTemplating.showNutritionalData(currentProductData);
+      // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
+      $("#google-map").append(googleMapHTML);
     });
   });
 
@@ -185,20 +173,32 @@ $(document).on('deviceready', function(){
 
   $("#left-button").click(function(e){
     e.preventDefault();
-    $("#nutrition-facts-label").css("display", "none");
-    $("#left-button").css("display", "none");
-    console.log(currentProductData);
-    viewTemplating.showLocationTemplate(currentProductData);
+    if(pagePosition === 1) {
+      pagePosition -=1;
+      $("#nutrition-facts-label").css("display", "none");
+      $("#left-button").css("display", "none");
+      console.log(currentProductData);
+      viewTemplating.showLocationTemplate(currentProductData);
+    }else{
+      pagePosition -=1;
+      $("#right-button").css("display", "block");
+      viewTemplating.showNutritionalData(currentProductData);
+    };
 
-    // var commodityName = response.name;
-  });
+    });
 
   $("#right-button").click(function(e){
     e.preventDefault();
+    if(pagePosition === 1){
+      pagePosition += 1;
     $("#nutrition-facts-label").css("display", "none");
     $("#right-button").css("display", "none");
     viewTemplating.showProduceProfile(currentProductData);
-
+  }else{
+    pagePosition +=1;
+    $("#left-button").css("display", "block");
+    viewTemplating.showNutritionalData(currentProductData);
+  };
 
   });
 
