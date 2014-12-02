@@ -1,0 +1,41 @@
+2014-12-01 15:46:36.708 MissingLabel[36888:629591] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/apprentice/Library/Developer/CoreSimulator/Devices/3AD86253-9283-4E5D-B8B0-7860CE506680/data/Containers/Data/Application/693A3B49-1D4C-4DAA-835B-958FCD8A6025/Library/Cookies/Cookies.binarycookies
+2014-12-01 15:46:37.676 MissingLabel[36888:629591] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-01 15:46:37.676 MissingLabel[36888:629591] Multi-tasking -> Device: YES, App: YES
+2014-12-01 15:46:37.722 MissingLabel[36888:629591] Unlimited access to network resources
+2014-12-01 15:46:37.739 MissingLabel[36888:629591] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-01 15:46:40.615 MissingLabel[36888:629591] Resetting plugins due to page load.
+2014-12-01 15:46:41.181 MissingLabel[36888:629591] Finished load of: file:///Users/apprentice/Library/Developer/CoreSimulator/Devices/3AD86253-9283-4E5D-B8B0-7860CE506680/data/Containers/Bundle/Application/E05DCED8-C1D1-4916-9286-1D87F836B69C/MissingLabel.app/www/index.html
+2014-12-01 15:58:39.936 MissingLabel[37256:635937] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/apprentice/Library/Developer/CoreSimulator/Devices/3AD86253-9283-4E5D-B8B0-7860CE506680/data/Containers/Data/Application/10EB5B90-2F0C-428E-8DBB-4B587742B614/Library/Cookies/Cookies.binarycookies
+2014-12-01 15:58:40.090 MissingLabel[37256:635937] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-01 15:58:40.091 MissingLabel[37256:635937] Multi-tasking -> Device: YES, App: YES
+2014-12-01 15:58:40.104 MissingLabel[37256:635937] Unlimited access to network resources
+2014-12-01 15:58:40.120 MissingLabel[37256:635937] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-01 15:58:40.685 MissingLabel[37256:635937] Resetting plugins due to page load.
+2014-12-01 15:58:41.655 MissingLabel[37256:635937] Finished load of: file:///Users/apprentice/Library/Developer/CoreSimulator/Devices/3AD86253-9283-4E5D-B8B0-7860CE506680/data/Containers/Bundle/Application/0E65A070-3A78-4A54-AE4A-3EDE1BDE1B6A/MissingLabel.app/www/index.html
+2014-12-01 20:54:52.975 MissingLabel[41682:727669] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-01 20:54:53.005 MissingLabel[41682:727669] Multi-tasking -> Device: YES, App: YES
+2014-12-01 20:54:53.063 MissingLabel[41682:727669] Unlimited access to network resources
+2014-12-01 20:54:53.115 MissingLabel[41682:727669] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-01 20:54:55.964 MissingLabel[41682:727669] Resetting plugins due to page load.
+2014-12-01 20:54:57.204 MissingLabel[41682:727669] Finished load of: file:///Users/apprentice/Library/Developer/CoreSimulator/Devices/3AD86253-9283-4E5D-B8B0-7860CE506680/data/Containers/Bundle/Application/7C694764-1629-4821-854C-8A5E07DC1E60/MissingLabel.app/www/index.html

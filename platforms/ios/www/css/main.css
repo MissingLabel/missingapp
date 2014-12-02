@@ -1,0 +1,435 @@
+/* * {
+        border: 1px dashed lightgrey;
+} */
+body {
+    position: relative;
+    font-size: 1em;
+    font-family: Arial, Sans-Serif;
+    background-color: #768002;
+    background-image: url("images/missing-label-veggie-backdrop.jpg");
+    background-size: 300%;
+    background-position: center;
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-repeat: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+/*     background-color: #768002; */
+/*     position: relative; */
+/*    top: -50px;*/
+    top: -50px;
+/*     box-shadow: 2px 2px 15px black; */
+    padding-bottom: 150px;
+
+}
+
+.logo {
+    font-size: 24px;
+    color: #e4f05d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+    position: fixed;
+    /*top: -70px;*/
+    top: -10px;
+    text-shadow: 1px 0.7px 3px black;
+    letter-spacing: 0.04em;
+}
+
+form {
+    position: relative;
+    top: 125px;
+    width: 90%;
+    margin: 50px auto;
+}
+
+input[type="submit"] {
+    background-color: orangered;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-shadow: 0.7px 0.7px 0.8px #f49797;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+#search-button, #create-button, #create-account-button, #login-button {
+    background-color: orange;
+    border: none;
+/*     border-radius: 10px; */
+/*     padding: 5px 15px; */
+    text-shadow: 0.7px 0.7px 1px #f2b90c;
+    font-size: 1em;
+    margin: 10px 0;
+    float: right;
+/*     box-shadow: 1.5px 3px 15px #484e01; */
+    background: #f2b90c;
+    background-image: -webkit-linear-gradient(top, #fcbf04, #d51e07);
+    background-image: -moz-linear-gradient(top, #fcbf04, #d51e07);
+    background-image: -ms-linear-gradient(top, #fcbf04, #d51e07);
+    background-image: -o-linear-gradient(top, #fcbf04, #d51e07);
+    background-image: linear-gradient(to bottom, #fd9b01, #d51e07);
+    -webkit-border-radius: 12;
+    -moz-border-radius: 12;
+    border-radius: 12px;
+/*   text-shadow: 1px 1px 3px #000000; */
+    text-shadow: 0.7px 0.7px 1px #cca9a9;
+    -webkit-box-shadow: 2px 3px 8px black;
+    -moz-box-shadow: 2px 3px 8px black;
+/*     box-shadow: 2px 2px 6px #484e01; */
+    box-shadow: 2px 3px 10px black;
+/*     font-family: Arial; */
+    color: black;
+/*   font-size: 17px; */
+    padding: 8px 20px 8px 20px;
+/*     text-decoration: none; */
+    letter-spacing: 0.02em;
+}
+
+#create-button {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+}
+
+input[type="text"], input[type="password"] {
+/*     background-color: #f2efef; */
+    background-color: #cdd386;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 97%;
+    margin: 20px auto;
+    box-shadow: 3px 5px 25px black;
+    font-size: 1.2em;
+    padding-left: 3%;
+    color: #484e01;
+}
+
+::-webkit-input-placeholder {
+   color: #9da354;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #9da354;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #9da354;
+}
+
+:-ms-input-placeholder {
+   color: #9da354;
+}
+
+#signup-form {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: none;
+}
+
+#commodity-name {
+    display: inline-block;
+/*     position: relative; */
+    margin-left: 10px;
+/*     top: 125px; */
+    font-size: 24px;
+    font-weight: bold;
+/*     color: #5c6402; */
+    color: #363b00;
+    text-shadow: 1px 0.7px 1px #9ca535;
+    letter-spacing: 0.04em;
+
+}
+
+#plu {
+    float: left;
+}
+
+#name-plu {
+    /*background-color: white;*/
+    width: 80%;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    top: 125px;
+    font-size: 24px;
+    font-weight: bold;
+/*     color: #5c6402; */
+    color: #363b00;
+    text-shadow: 1px 0.7px 1px #9ca535;
+    letter-spacing: 0.04em;
+/*     float: left; */
+}
+
+#nutrition-facts-label {
+    position: relative;
+    top: 100px;
+/*     left: 10%; */
+    margin: 10%;
+    display: none;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 8px 8px 35px black;
+    color: #565555;
+}
+
+#nutrition-facts-label h1 {
+    font-size: 2.0em;
+    font-weight: bold;
+    color: black;
+}
+
+#nutrition-facts-label h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+}
+
+#nutrition-facts-label h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+#nutrition-facts-label h4 {
+    font-size: 0.9em;
+    font-weight: bold;
+/*     color: black; */
+}
+
+#nutrition-facts-label h5 {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 3px;
+/*     color: black; */
+}
+
+#servings {
+    float: left;
+    padding-right: 3%;
+}
+
+#serving-size {
+    color: black;
+    float: right;
+}
+
+.serving-size-label {
+    display: inline-block;
+    float: left;
+}
+
+.large-label-border {
+    min-height: 15px;
+    padding-bottom: 6px;
+    border-bottom: 8px solid black;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.large-label-border-short {
+    min-height: 15px;
+    padding-bottom: 0;
+    border-bottom: 8px solid black;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.medium-label-border {
+    min-height: 35px;
+    padding-bottom: 6px;
+    border-bottom: 4px solid black;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.medium-label-border-short {
+    min-height: 35px;
+    padding-bottom: 0;
+    border-bottom: 4px solid black;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.amount-per-serving {
+    clear: both;
+/*     float: left; */
+}
+
+.calories-label {
+    clear: left;
+    float: left;
+}
+
+#calories {
+   float: right;
+   position: relative;
+   top: -9px;
+}
+table {
+    width: 100%;
+    cellspacing: 0;
+    cellpadding: 0;
+}
+
+th {
+    colspan: 2;
+}
+
+td {
+    valign: middle;
+}
+
+th, td {
+    height: 30px;
+}
+
+.td-left, .td-left-bottom {
+/*     border: 1px solid black; */
+    display: block;
+    width: 15%;
+    float: left;
+    height: 1.2em;
+    padding: 2px;
+    border-top: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    padding-top: 4px;
+/*     color: black; */
+/*     text-align: right; */
+    padding-right: 5%;
+}
+
+.td-right, .td-right-bottom {
+/*      border: 1px solid black; */
+    border-top: 1px solid darkgrey;
+    width: 73%;
+    float: left;
+    height: 1.2em;
+/*     color: black; */
+    vertical-align: ;
+    padding-top: 4px;
+    padding-left: 5%;
+}
+
+.td-right span {
+    float: left;
+    padding-right: 3%;
+    font-weight: bold;
+    color: black;
+}
+
+#total-fat-percentage, #sodium-percentage, #total-carbs-percentage, #dietary-fiber-percentage, #sugar-percentage, #added-sugar-percentage, #protein-percentage, #saturated-fat-percentage, #trans-fat-percentage, #cholesterol-percentage {
+    float: left;
+    font-weight: bold;
+    color: black;
+}
+
+#total-fat, #saturated-fat, #trans-fat, #cholesterol, #sodium, #total-carbs, #dietary-fiber, #sugar, #added-sugars, #protein {
+    float: left;
+}
+
+.td-indent p {
+/*     position: relative; */
+    float: left;
+/*     left: 8%; */
+    padding-left: 5%;
+    padding-right: 3%;
+    color: #565555;
+}
+
+.td-indent em {
+/*     Why do I need to force an em tag to italicize text? */
+    font-style: italic;
+}
+
+.added-sugars {
+    margin-left: 5%;
+}
+
+.td-right-bottom span {
+    font-weight: bold;
+    float: left;
+    padding-right: 3%;
+}
+
+#item-name {
+    font-weight: bold;
+    float: left;
+    padding-right: 3%;
+}
+
+#item-qty {
+    float: left;
+}
+
+#item-unit {
+    display: inline-block;
+}
+
+textarea:focus, #search-button:focus, #login-button:focus, #create-account-button:focus, #create-button:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+/* border-color: rgba(126, 239, 104, 0.8); */
+/* border-color: rgba(203, 220, 1, 0.8); */
+border-color: rgba(220, 11, 1, 0.8);
+/* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6); */
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(203, 220, 1, 0.6);
+outline: 0 none;}
+
+#search-form {
+    display: none;
+}
+
+#swipe-buttons {
+    display: none;
+}
+
+#location-data {
+    display: none;
+}
+
+/*#login-form {
+    display: none;
+}*/
+
+/*#create-form {
+    display: none;
+}*/
+
+/*body[orient="landscape"] {
+    body {
+        background-image: none;
+        background-size: 200%;
+    }
+
+    #create-button {
+        position: relative;
+    }
+
+}*/
+/*
+#search-form {
+    display: none;
+}
+
+#login-form {
+    display: none;
+}
+
+#location-data {
+    display: block;
+}*/

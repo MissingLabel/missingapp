@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Missing Label</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+<link rel="stylesheet" type="text/css" media="all" href="css/vendor/reset.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
+<script src="js/vendor/underscore.js"></script>
+
+
+<script src="js/main.js"></script>
+
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="/index.html" class="logo">Missing Label</a>
+    </header>
+
+    <div class="main-content">
+
+      <div id="name-plu">
+        <div id="plu"></div>
+        <div id="commodity-name"></div>
+      </div>
+
+      <div id="nutrition-facts">
+      </div>
+
+      <h1></h1>
+
+<!-- LOGIN FORM -->
+
+      <form id="login-form" action="" method="POST">
+        <input id="login-input-field" type="text" placeholder="Email">
+        <input id="password-input" type="password" placeholder="Password">
+        <button id="login-button" name="search" type="submit" value="Login">Login</button>
+      </form>
+
+      <form id="create-form" action="" method="POST">
+        <button id="create-button" name="search" type="submit" value="Create Account">Create Account</button>
+      </form>
+
+<!-- SIGNUP FORM -->
+
+      <form id="signup-form" action="" method="POST">
+        <input id="signup-input-field" type="text" placeholder="New Email">
+        <input id="new-password-input" type="password" placeholder="New Password">
+        <button id="create-account-button" name="search" type="submit" value="Create Account">Create Account</button>
+      </form>
+
+<!-- SEARCH FORM -->
+
+      <form id="search-form" action="" method="GET">
+        <input id="input-field" type="text" placeholder="Enter PLU or scan an item">
+        <button id="search-button" name="search" type="submit" value="Search">Search</button>
+      </form>
+
+
+<!-- NUTRITION FACTS LABEL TEMPLATE-->
+
+      <div id="nutrition-facts-label"></div>
+      <script id="nutrition-template" type="text/template" class="template">
+        <h1 class="nutrition-facts">Nutrition Facts</h1>
+        <hr>
+        <h3><div id="servings">1</div>serving</h3>
+        <div class="large-label-border">
+          <p class="serving-size-label">Serving size<p id="serving-size">1</p></p>
+        </div>
+        <div class="medium-label-border">
+          <h4 class="amount-per-serving">Amount per serving</h4>
+          <h2 class="calories-label">Calories</h2>
+          <h1 id="calories"><%- nutritionData.calories %></h1>
+        </div>
+        <div class="large-label-border-short">
+          <h5>% DV*</h5>
+          <table>
+            <tr>
+              <td class="td-left"><div id="total-fat-percentage"><%- nutritionData.fat_per %></div>%</td>
+              <td class="td-right"><span>Total Fat </span><div id="total-fat"><%- nutritionData.total_fat %></div><div id="total-fat-unit"><%- nutritionData.fat_units %></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="saturated-fat-percentage"><%- nutritionData.sat_per %></div></td>
+              <td class="td-right td-indent"><p>Saturated Fat </p><div id="saturated-fat"><%- nutritionData.sat_fat %></div><div id="saturated-fat-unit"><%- nutritionData.sat_fat_unit %></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="trans-fat-percentage"><%- nutritionData.trans_fat_per %></div></td>
+              <td class="td-right td-indent"><p><em>Trans</em> Fat </p><div id="trans-fat"><%- nutritionData.trans_fat%></div><div id="trans-fat-unit"><%- nutritionData.trans_fat_unit %></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="cholesterol-percentage"><%-nutritionData.cholesterol_per%></div></td>
+              <td class="td-right"><span>Cholesterol </span><div id="cholesterol"><%-nutritionData.cholesterol%></div><div id="cholesterol-unit"><%-nutritionData.cholesterol_units%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="sodium-percentage"><%-nutritionData.sodium_per%></div>%</td>
+              <td class="td-right"><span>Sodium </span><div id="sodium"><%-nutritionData.sodium%></div><div id="sodium-unit"><%-nutritionData.sodium_units%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="total-carbs-percentage"><%-nutritionData.carb_per%></div>%</td>
+              <td class="td-right"><span>Total Carbs </span><div id="total-carbs"><%-nutritionData.carb%></div><div id="total-carbs-unit"><%-nutritionData.carb_unit%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="dietary-fiber-percentage"><%-nutritionData.fiber_per%></div>%</td>
+              <td class="td-right td-indent"><p>Dietary Fiber </p><div id="dietary-fiber"><%-nutritionData.fiber%></div><div id="dietary-fiber-unit"><%-nutritionData.fiber_units%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="sugar-percentage"><%-nutritionData.sugars_per%></div></td>
+              <td class="td-right td-indent"><p>Sugars </p><div id="sugar"><%-nutritionData.sugars%></div><div id="sugar-unit"><%-nutritionData.sugars_unit%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="added-sugar-percentage"><%-nutritionData.added_sugars_per%></div></td>
+              <td class="td-right td-indent"><p class="added-sugars">Added Sugars </p><div id="saturated-fat"><%-nutritionData.added_sugars%></div><div id="added-sugar-unit"><%-nutritionData.added_sugars_unit%></div></td>
+            </tr>
+            <tr>
+              <td class="td-left"><div id="protein-percentage"><%-nutritionData.protein_per%></div>%</td>
+              <td class="td-right"><span>Protein </span><div id="protein"><%-nutritionData.protein%></div><div id="protein-unit"><%-nutritionData.protein_units%></div></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="medium-label-border-short">
+
+          <table id="nutrition-lower-table">
+            <tbody>
+
+
+
+            </tbody>
+          </table>
+        </div>
+
+
+
+      </script>
+
+      <form id="swipe-buttons" action="" method="GET">
+        <button id="left-button" name="swipe-left" type="submit" value="swipe-left">Left</button>
+        <button id="right-button" name="swipe-right" type="submit" value="swipe-right">Right</button>
+      </form>
+
+<!-- LOCATION TEMPLATE-->
+      <div id="location-data"></div>
+
+      <script id="location-template" type="text/template" class="template">
+        <h1>Location</h1>
+        <div id="farm-name">Farm name: <%- locationData.farm_name %></div>
+      </script>
+
+<!-- GENERAL INFO TEMPLATE-->
+      <div id="general-info-data"></div>
+      <script id="general-info-template" type="text/template" class="template">
+
+          <div id="organic">Organic: <%- generalData.organic %></div>
+
+      </script>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
