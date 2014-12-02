@@ -62,9 +62,25 @@ function makeTemplateProcessor($){
     $("#location-data").html(
       locationTemplate(locationData)
     )};
-// };
+
+  function showProduceProfile(data) {
+    showPage("produce-profile");
+
+    _.templateSettings.variable = "produceData";
+
+    var produceProfileTemplate = _.template(
+      $("#produce-profile-template").html()
+    );
+
+    var generalData = data;
+
+    $("#nutrition-facts-label").html(
+      produceProfileTemplate( generalData )
+    )
+  };
 
   return {
+    showProduceProfile: showProduceProfile,
     showLocationTemplate: showLocationTemplate,
     showNutritionalData: showNutritionalData,
     showPage: showPage
@@ -180,18 +196,9 @@ $(document).on('deviceready', function(){
   $("#right-button").click(function(e){
     e.preventDefault();
     $("#nutrition-facts-label").css("display", "none");
+    $("#right-button").css("display", "none");
+    viewTemplating.showProduceProfile(currentProductData);
 
-    _.templateSettings.variable = "nutritionData";
-
-    var locationTemplate = _.template(
-      $("#location-template").html()
-    );
-
-    var locationData = currentProductData;
-
-    $("#nutrition-facts-label").html(
-      nutritionTemplate( nutritionData )
-    );
 
   });
 

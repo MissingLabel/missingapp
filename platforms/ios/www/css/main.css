@@ -6,7 +6,7 @@ body {
     font-size: 1em;
     font-family: Arial, Sans-Serif;
     background-color: #768002;
-    background-image: url("images/missing-label-veggie-backdrop.jpg");
+    background-image: url("../img/missing-label-veggie-backdrop.jpg");
     background-size: 300%;
     background-position: center;
     background-attachment: fixed;
