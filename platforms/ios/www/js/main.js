@@ -92,7 +92,7 @@ var viewTemplating = makeTemplateProcessor(jQuery);
 $(document).on('deviceready', function(){
   var re =/\d+$/;
   var localScanResult = re.exec(window.location);
-  alert(localScanResult);
+  // alert(localScanResult);
   // console.log(localScanResult);
   if(true) {
     alert(localScanResult);
