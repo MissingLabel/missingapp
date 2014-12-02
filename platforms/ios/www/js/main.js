@@ -90,11 +90,12 @@ function makeTemplateProcessor($){
 var viewTemplating = makeTemplateProcessor(jQuery);
 
 $(document).on('deviceready', function(){
-
-  var localScanResult = localStorage.scanResult;
-  console.log(localScanResult);
-  if (scanResult !== nil) {
-    alert(scanResult);
+  var re =/\d+$/;
+  var localScanResult = re.exec(window.location);
+  alert(localScanResult);
+  // console.log(localScanResult);
+  if(true) {
+    alert(localScanResult);
     // ajax call with databar result
     var request = $.ajax({
       dataType: "json",
