@@ -62,7 +62,6 @@ function makeTemplateProcessor($){
     $("#location-data").html(
       locationTemplate(locationData)
     )};
-// };
 
   function showProduceProfile(data) {
     showPage("produce-profile");
@@ -76,8 +75,8 @@ function makeTemplateProcessor($){
     var generalData = data;
 
     $("#nutrition-facts-label").html(
-      produceProfileTemplate( nutritionData )
-    );
+      produceProfileTemplate( generalData )
+    )
   };
 
   return {
@@ -197,8 +196,7 @@ $(document).on('deviceready', function(){
   $("#right-button").click(function(e){
     e.preventDefault();
     $("#nutrition-facts-label").css("display", "none");
-    $"#right-button").css("display", "none");
-    console.log(currentProductData);
+    $("#right-button").css("display", "none");
     viewTemplating.showProduceProfile(currentProductData);
 
 
