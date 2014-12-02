@@ -1,9 +1,10 @@
 $(document).on('deviceready', function(){
-  var swipeleft = new Hammer("body");
-  swipeleft.on('swipeleft', function(ev) {
+  var myElement = document.getElementById('body');
+
+  var swipeEvents = new Hammer(myElement);
+  swipeEvents.on('swipeleft', function(ev) {
     if(pagePosition === 1) {
       pagePosition -=1;
-      $("#nutrition-facts-label").css("display", "none");
       $("#left-button").css("display", "none");
       console.log(currentProductData);
       viewTemplating.showLocationTemplate(currentProductData);
@@ -15,11 +16,9 @@ $(document).on('deviceready', function(){
       console.log(ev);
   });
 
-  var swiperight = new Hammer("body");
-  swiperight.on('swiperight', function(ev) {
+  swipeEvents.on('swiperight', function(ev) {
     if(pagePosition === 1){
       pagePosition += 1;
-      $("#nutrition-facts-label").css("display", "none");
       $("#right-button").css("display", "none");
       viewTemplating.showProduceProfile(currentProductData);
     }else{
