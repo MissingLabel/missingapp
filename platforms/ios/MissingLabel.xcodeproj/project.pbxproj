@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -40,6 +39,35 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		37616F7BFEA24E688B926666 /* libscanditsdk-iphone-4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5002D08B64154A63B46DA790 /* libscanditsdk-iphone-4.2.2.a */; };
+		0896E6A979A04102BAFF5B1A /* ScanditSDK.mm in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D0A1E2474B6A89EF8F0F /* ScanditSDK.mm */; };
+		92FAC68F184149359670B22C /* ScanditSDKRotatingBarcodePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D839AFCFE6B4EBAABC92F17 /* ScanditSDKRotatingBarcodePicker.m */; };
+		F10316CB28F748F8A3E646F8 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25C9A7CEC7B84F2CABB143C4 /* beep.wav */; };
+		ABDE9408503E413188964773 /* empty.cpp in Resources */ = {isa = PBXBuildFile; fileRef = 4C5754BE17B24A1887EFDB2F /* empty.cpp */; };
+		B685509603E746779C8E8FDF /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2DC9301AD5445A901671FA /* poweredby.png */; };
+		34F98B1D516E466C8ED749C0 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA774F8E657D4327B114A838 /* poweredby@2x.png */; };
+		D0EF471831E34B6C8D83E029 /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8416848FEE344593B542E00A /* flashlight-turn-off-icon.png */; };
+		4CF679A55303495FA9A79FA9 /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846B1B3E5ED4E0A80466C93 /* flashlight-turn-off-icon@2x.png */; };
+		930DF2C338174F48A1C3B551 /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F0184A3023432A9B9E8C29 /* flashlight-turn-on-icon.png */; };
+		ABDF3BDBA9C14FEABFD6FB24 /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D58CC767DB5746BEA1D4F847 /* flashlight-turn-on-icon@2x.png */; };
+		C7ED61EFE9C5408E86D4D5C3 /* flashlight-turn-off-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 66C29C1ADD6441238BD75FCB /* flashlight-turn-off-icon-pressed.png */; };
+		956216B704824384B464144E /* flashlight-turn-off-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE429A51262C4AD1B68D6C11 /* flashlight-turn-off-icon-pressed@2x.png */; };
+		795D477F8CD848A28E1918B3 /* flashlight-turn-on-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AB6694FE5394994AB26F319 /* flashlight-turn-on-icon-pressed.png */; };
+		A0F1328E77534954B8BA96CF /* flashlight-turn-on-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7722DFF46A7E4F06BAD4066E /* flashlight-turn-on-icon-pressed@2x.png */; };
+		D577E675162246758E729086 /* camera-swap-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D15D30AF23C4286AB806B1A /* camera-swap-icon-pressed.png */; };
+		B284364157D04429BB8FDE7E /* camera-swap-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCED03D7EBA4BE9B51317BA /* camera-swap-icon-pressed@2x.png */; };
+		1376DABEFFA841E2ACEDC2A1 /* camera-swap-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F874F6DEAC4AA4A52FE45B /* camera-swap-icon.png */; };
+		3E2B1D9568E84DA5AFD2FA78 /* camera-swap-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A62659DDCFC546BC88C06154 /* camera-swap-icon@2x.png */; };
+		FACD5A28C1DD46B2BE3B9EB7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330992031DCE4886ABCC8045 /* AudioToolbox.framework */; };
+		92EA85BB92DD45B382A165B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C549D198542A48F48F4EA172 /* AVFoundation.framework */; };
+		6239EEA67F074B58AEDEC7CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739DD125884F4C37B7825FC1 /* CoreLocation.framework */; };
+		F1DFC4F6A62B403495BD75EC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483F957C4DFF475DA47338A3 /* CoreMedia.framework */; };
+		7861201CDBEB4B2AB7FEE362 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCFA979514A4E8AA770B5CC /* CoreVideo.framework */; };
+		776D19407B1043F1AB9E4498 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002AAF278AA5468481CE0473 /* QuartzCore.framework */; };
+		FEF79A64EAAC464C87196209 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0B40AE29664C3DBB773956 /* SystemConfiguration.framework */; };
+		8311E1FB9F1742469816F275 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4C6B60C194752A73FD8ED /* libiconv.dylib */; };
+		AE7E2FF09BC842089B5A6F21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D9BB1B9E6B4029B0AD9503 /* libz.dylib */; };
+		B85F74DEA00447ADACED7583 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7C82486594D43AF18A986 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +131,39 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MissingLabel/config.xml; sourceTree = "<group>"; };
+		5002D08B64154A63B46DA790 /* libscanditsdk-iphone-4.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libscanditsdk-iphone-4.2.2.a"; path = "MissingLabel/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK/libscanditsdk-iphone-4.2.2.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		CDC9D0A1E2474B6A89EF8F0F /* ScanditSDK.mm */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "ScanditSDK.mm"; path = "com.mirasense.scanditsdk.plugin/ScanditSDK.mm"; sourceTree = "<group>"; fileEncoding = 4; };
+		2D839AFCFE6B4EBAABC92F17 /* ScanditSDKRotatingBarcodePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ScanditSDKRotatingBarcodePicker.m"; path = "com.mirasense.scanditsdk.plugin/ScanditSDKRotatingBarcodePicker.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		C7BCBF0DA95C4859A64517FE /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScanditSDKBarcodePicker.h"; path = "com.mirasense.scanditsdk.plugin/ScanditSDK/ScanditSDKBarcodePicker.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		45B7EB2608A249C8B72F8A3C /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScanditSDKOverlayController.h"; path = "com.mirasense.scanditsdk.plugin/ScanditSDK/ScanditSDKOverlayController.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		BE9F87CB756C4D67BD92EB11 /* ScanditSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScanditSDK.h"; path = "com.mirasense.scanditsdk.plugin/ScanditSDK.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8FF59D6D963143818A88E2F3 /* ScanditSDKRotatingBarcodePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScanditSDKRotatingBarcodePicker.h"; path = "com.mirasense.scanditsdk.plugin/ScanditSDKRotatingBarcodePicker.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		25C9A7CEC7B84F2CABB143C4 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "beep.wav"; path = "beep.wav"; sourceTree = "<group>"; fileEncoding = 4; };
+		4C5754BE17B24A1887EFDB2F /* empty.cpp */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "empty.cpp"; path = "empty.cpp"; sourceTree = "<group>"; fileEncoding = 4; };
+		CF2DC9301AD5445A901671FA /* poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "poweredby.png"; path = "poweredby.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		DA774F8E657D4327B114A838 /* poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "poweredby@2x.png"; path = "poweredby@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		8416848FEE344593B542E00A /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-off-icon.png"; path = "flashlight-turn-off-icon.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		2846B1B3E5ED4E0A80466C93 /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-off-icon@2x.png"; path = "flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		00F0184A3023432A9B9E8C29 /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-on-icon.png"; path = "flashlight-turn-on-icon.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		D58CC767DB5746BEA1D4F847 /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-on-icon@2x.png"; path = "flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		66C29C1ADD6441238BD75FCB /* flashlight-turn-off-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-off-icon-pressed.png"; path = "flashlight-turn-off-icon-pressed.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		AE429A51262C4AD1B68D6C11 /* flashlight-turn-off-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-off-icon-pressed@2x.png"; path = "flashlight-turn-off-icon-pressed@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		4AB6694FE5394994AB26F319 /* flashlight-turn-on-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-on-icon-pressed.png"; path = "flashlight-turn-on-icon-pressed.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		7722DFF46A7E4F06BAD4066E /* flashlight-turn-on-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "flashlight-turn-on-icon-pressed@2x.png"; path = "flashlight-turn-on-icon-pressed@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		8D15D30AF23C4286AB806B1A /* camera-swap-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "camera-swap-icon-pressed.png"; path = "camera-swap-icon-pressed.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		1DCED03D7EBA4BE9B51317BA /* camera-swap-icon-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "camera-swap-icon-pressed@2x.png"; path = "camera-swap-icon-pressed@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		13F874F6DEAC4AA4A52FE45B /* camera-swap-icon.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "camera-swap-icon.png"; path = "camera-swap-icon.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		A62659DDCFC546BC88C06154 /* camera-swap-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "camera-swap-icon@2x.png"; path = "camera-swap-icon@2x.png"; sourceTree = "<group>"; fileEncoding = 4; };
+		330992031DCE4886ABCC8045 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		C549D198542A48F48F4EA172 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		739DD125884F4C37B7825FC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		483F957C4DFF475DA47338A3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		3CCFA979514A4E8AA770B5CC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		002AAF278AA5468481CE0473 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		EA0B40AE29664C3DBB773956 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		85C4C6B60C194752A73FD8ED /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libiconv.dylib"; path = "usr/lib/libiconv.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		56D9BB1B9E6B4029B0AD9503 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		86B7C82486594D43AF18A986 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +175,17 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				37616F7BFEA24E688B926666 /* libscanditsdk-iphone-4.2.2.a in Frameworks */,
+				FACD5A28C1DD46B2BE3B9EB7 /* AudioToolbox.framework in Frameworks */,
+				92EA85BB92DD45B382A165B2 /* AVFoundation.framework in Frameworks */,
+				6239EEA67F074B58AEDEC7CF /* CoreLocation.framework in Frameworks */,
+				F1DFC4F6A62B403495BD75EC /* CoreMedia.framework in Frameworks */,
+				7861201CDBEB4B2AB7FEE362 /* CoreVideo.framework in Frameworks */,
+				776D19407B1043F1AB9E4498 /* QuartzCore.framework in Frameworks */,
+				FEF79A64EAAC464C87196209 /* SystemConfiguration.framework in Frameworks */,
+				8311E1FB9F1742469816F275 /* libiconv.dylib in Frameworks */,
+				AE7E2FF09BC842089B5A6F21 /* libz.dylib in Frameworks */,
+				B85F74DEA00447ADACED7583 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +247,22 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* MissingLabel-Info.plist */,
+				25C9A7CEC7B84F2CABB143C4 /* beep.wav */,
+				4C5754BE17B24A1887EFDB2F /* empty.cpp */,
+				CF2DC9301AD5445A901671FA /* poweredby.png */,
+				DA774F8E657D4327B114A838 /* poweredby@2x.png */,
+				8416848FEE344593B542E00A /* flashlight-turn-off-icon.png */,
+				2846B1B3E5ED4E0A80466C93 /* flashlight-turn-off-icon@2x.png */,
+				00F0184A3023432A9B9E8C29 /* flashlight-turn-on-icon.png */,
+				D58CC767DB5746BEA1D4F847 /* flashlight-turn-on-icon@2x.png */,
+				66C29C1ADD6441238BD75FCB /* flashlight-turn-off-icon-pressed.png */,
+				AE429A51262C4AD1B68D6C11 /* flashlight-turn-off-icon-pressed@2x.png */,
+				4AB6694FE5394994AB26F319 /* flashlight-turn-on-icon-pressed.png */,
+				7722DFF46A7E4F06BAD4066E /* flashlight-turn-on-icon-pressed@2x.png */,
+				8D15D30AF23C4286AB806B1A /* camera-swap-icon-pressed.png */,
+				1DCED03D7EBA4BE9B51317BA /* camera-swap-icon-pressed@2x.png */,
+				13F874F6DEAC4AA4A52FE45B /* camera-swap-icon.png */,
+				A62659DDCFC546BC88C06154 /* camera-swap-icon@2x.png */,
 			);
 			name = Resources;
 			path = MissingLabel/Resources;
@@ -186,6 +274,17 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				5002D08B64154A63B46DA790 /* libscanditsdk-iphone-4.2.2.a */,
+				330992031DCE4886ABCC8045 /* AudioToolbox.framework */,
+				C549D198542A48F48F4EA172 /* AVFoundation.framework */,
+				739DD125884F4C37B7825FC1 /* CoreLocation.framework */,
+				483F957C4DFF475DA47338A3 /* CoreMedia.framework */,
+				3CCFA979514A4E8AA770B5CC /* CoreVideo.framework */,
+				002AAF278AA5468481CE0473 /* QuartzCore.framework */,
+				EA0B40AE29664C3DBB773956 /* SystemConfiguration.framework */,
+				85C4C6B60C194752A73FD8ED /* libiconv.dylib */,
+				56D9BB1B9E6B4029B0AD9503 /* libz.dylib */,
+				86B7C82486594D43AF18A986 /* libc++.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +300,12 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9D0A1E2474B6A89EF8F0F /* ScanditSDK.mm */,
+				2D839AFCFE6B4EBAABC92F17 /* ScanditSDKRotatingBarcodePicker.m */,
+				C7BCBF0DA95C4859A64517FE /* ScanditSDKBarcodePicker.h */,
+				45B7EB2608A249C8B72F8A3C /* ScanditSDKOverlayController.h */,
+				BE9F87CB756C4D67BD92EB11 /* ScanditSDK.h */,
+				8FF59D6D963143818A88E2F3 /* ScanditSDKRotatingBarcodePicker.h */,
 			);
 			name = Plugins;
 			path = MissingLabel/Plugins;
@@ -282,7 +387,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = FA85MA7RFP;
@@ -359,6 +464,22 @@
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				F10316CB28F748F8A3E646F8 /* beep.wav in Resources */,
+				ABDE9408503E413188964773 /* empty.cpp in Resources */,
+				B685509603E746779C8E8FDF /* poweredby.png in Resources */,
+				34F98B1D516E466C8ED749C0 /* poweredby@2x.png in Resources */,
+				D0EF471831E34B6C8D83E029 /* flashlight-turn-off-icon.png in Resources */,
+				4CF679A55303495FA9A79FA9 /* flashlight-turn-off-icon@2x.png in Resources */,
+				930DF2C338174F48A1C3B551 /* flashlight-turn-on-icon.png in Resources */,
+				ABDF3BDBA9C14FEABFD6FB24 /* flashlight-turn-on-icon@2x.png in Resources */,
+				C7ED61EFE9C5408E86D4D5C3 /* flashlight-turn-off-icon-pressed.png in Resources */,
+				956216B704824384B464144E /* flashlight-turn-off-icon-pressed@2x.png in Resources */,
+				795D477F8CD848A28E1918B3 /* flashlight-turn-on-icon-pressed.png in Resources */,
+				A0F1328E77534954B8BA96CF /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
+				D577E675162246758E729086 /* camera-swap-icon-pressed.png in Resources */,
+				B284364157D04429BB8FDE7E /* camera-swap-icon-pressed@2x.png in Resources */,
+				1376DABEFFA841E2ACEDC2A1 /* camera-swap-icon.png in Resources */,
+				3E2B1D9568E84DA5AFD2FA78 /* camera-swap-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +511,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				0896E6A979A04102BAFF5B1A /* ScanditSDK.mm in Resources */,
+				92FAC68F184149359670B22C /* ScanditSDKRotatingBarcodePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +558,10 @@
 				PRODUCT_NAME = MissingLabel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MissingLabel/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK\"",
+				);
 			};
 			name = Debug;
 		};
@@ -467,6 +594,10 @@
 				PRODUCT_NAME = MissingLabel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MissingLabel/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK\"",
+				);
 			};
 			name = Release;
 		};

@@ -91,6 +91,30 @@ var viewTemplating = makeTemplateProcessor(jQuery);
 
 $(document).on('deviceready', function(){
 
+  var localScanResult = localStorage.scanResult;
+  console.log(localScanResult);
+  if (scanResult !== nil) {
+    alert(scanResult);
+    // ajax call with databar result
+    var request = $.ajax({
+      dataType: "json",
+      url: "https://vast-cliffs-6881.herokuapp.com/items/" + localScanResult,
+      type: "GET"
+    });
+
+    request.done( function(response){
+      $("body").css("background-image", "none");
+      $("#search-form").css("display", "none");
+      console.log(response);
+      console.log("hello");
+      currentProductData = response;
+      viewTemplating.showNutritionalData(currentProductData);
+      // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
+      $("#google-map").append(googleMapHTML);
+
+    });
+  }
+
   var pagePosition = 1;
   var currentProductData;
 

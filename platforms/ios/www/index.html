@@ -66,6 +66,9 @@
         <input id="input-field" type="text" placeholder="Enter PLU or scan an item">
         <button id="search-button" name="search" type="submit" value="Search">Search</button>
       </form>
+      <form id="scanner-button" action="scan.html" method="GET">
+        <button id="scanner">scan</button>
+      </form>
 
 
 <!-- NUTRITION FACTS LABEL TEMPLATE-->
@@ -155,13 +158,26 @@
       <script id="location-template" type="text/template" class="template">
         <h1>Location</h1>
         <div id="farm-name">Farm name: <%- locationData.farm_name %></div>
+        <h1><%- locationData.farm_geo_location %></h1>
+        <h1></h1>
+        <div id="google-map"></div>
+
+        <html>
+            <iframe
+              width="600"
+              height="450"
+              frameborder="0" style="border:0"
+              <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Chicago+IL&destination=<%-locationData.farm_geo_location%>">>
+            </iframe>
+        </html>
+
       </script>
 
 <!-- GENERAL INFO TEMPLATE-->
-      <div id="general-info-data"></div>
-      <script id="general-info-template" type="text/template" class="template">
-
-          <div id="organic">Organic: <%- generalData.organic %></div>
+      <div id="produce-profile"></div>
+      <script id="produce-profile-template" type="text/template" class="template">
+          <h1>Hello World</h1>
+          <div id="organic">Organic: <%- produceData.organic %></div>
 
       </script>
 
