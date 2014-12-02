@@ -1,3 +1,5 @@
+
+
 function makeTemplateProcessor($){
   var currentPagePosition = 1;
 
@@ -62,6 +64,20 @@ function makeTemplateProcessor($){
     var produceProfileTemplate = _.template($("#produce-profile-template").html());
     var produceData = data;
     $("#produce-profile").html(produceProfileTemplate(produceData));
+
+  }
+
+  function postLogin() {
+    // $("#login-form").css("display", "none");
+    // $("#create-form").css("display", "none");
+    // $("#search-form").css("display", "block");
+    showSearchView();
+  }
+
+  function showSearchView() {
+    var view = new SearchView();
+    view.render();
+    $("#content").html(view.$el);
   }
 
   return {
@@ -75,6 +91,42 @@ function makeTemplateProcessor($){
 
 var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
+
+
+function LoginView() {
+  this.$el = $("<div></div>");
+  this.template = _.template($("#login-view-template").html());
+
+  this.$el.on('click', "#login-button", function(event) {
+    e.preventDefault();
+    this.login();
+  }.bind(this));
+}
+
+LoginView.prototype.render = function() {
+  this.$el.html(this.template());
+}
+
+LoginView.prototype.login = function() {
+  var emailInput = this.$el.find("#login-input-field").val();
+  var loginInput = this.$el.find("#password-input").val();
+
+  var request = $.ajax({
+    dataType: "json",
+    url: "https://vast-cliffs-6881.herokuapp.com/login",
+    data: {email: emailInput, password: loginInput},
+    type: "POST"
+  });
+
+  request.done(function(response){
+    console.log(response.loginSecure);
+    if(response.loginSecure === "True"){
+      viewTemplate.postLogin();
+    } else {
+      alert("Please try again");
+    }
+  });
+}
 
 $(document).on('deviceready', function(){
   var re =/\d+$/;
@@ -116,16 +168,6 @@ $(document).on('deviceready', function(){
       type: "POST"
     })
 
-    request.done(function(response){
-      console.log(response.loginSecure);
-      if(response.loginSecure === "True"){
-        $("#login-form").css("display", "none");
-        $("#create-form").css("display", "none");
-        $("#search-form").css("display", "block");
-      } else {
-        alert("Please try again");
-      }
-    });
 
   });
 

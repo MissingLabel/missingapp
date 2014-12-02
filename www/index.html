@@ -11,7 +11,6 @@
 
 <script type="text/javascript" src="cordova.js"></script>
 <script src="js/vendor/jquery.js"></script>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
 <script src="js/vendor/underscore.js"></script>
 <script src="js/vendor/hammer.js"></script>
 
@@ -76,6 +75,7 @@
 <!-- NUTRITION FACTS LABEL TEMPLATE-->
 
       <div id="nutrition-facts-label"></div>
+
       <script id="nutrition-template" type="text/template" class="template">
         <h1 class="nutrition-facts">Nutrition Facts</h1>
         <hr>
@@ -92,8 +92,21 @@
           <h5>% DV*</h5>
           <table>
             <tr>
-              <td class="td-left"><div id="total-fat-percentage"><%- nutritionData.fat_per %></div>%</td>
-              <td class="td-right"><span>Total Fat </span><div id="total-fat"><%- nutritionData.total_fat %></div><div id="total-fat-unit"><%- nutritionData.fat_units %></div></td>
+              <td class="td-left">
+                <div id="total-fat-percentage">
+                  <%- nutritionData.fat_per %>
+                </div>%
+              </td>
+
+              <td class="td-right">
+                <span>Total Fat </span>
+                <div id="total-fat">
+                  <%- nutritionData.total_fat %>
+                </div>
+                <div id="total-fat-unit">
+                  <%- nutritionData.fat_units %>
+                </div>
+              </td>
             </tr>
             <tr>
               <td class="td-left"><div id="saturated-fat-percentage"><%- nutritionData.sat_per %></div></td>
@@ -144,8 +157,6 @@
             </tbody>
           </table>
         </div>
-
-
 
       </script>
 
