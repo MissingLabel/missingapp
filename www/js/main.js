@@ -1,4 +1,5 @@
 function makeTemplateProcessor($){
+  var currentPagePosition = 1;
 
   function showPage(page){
       $("#search-form").css("display", "none");
@@ -12,6 +13,7 @@ function makeTemplateProcessor($){
 
   function showNutritionalData(data) {
       showPage("nutrition-facts-label");
+      currentPagePosition = 1;
       $("#swipe-buttons").css("display", "block");
       $("body").css("background-image", "none");
       $(".logo").css("top", "-20px");
@@ -19,16 +21,9 @@ function makeTemplateProcessor($){
       var commodityName = data.name;
 
       _.templateSettings.variable = "nutritionData";
-
-      var nutritionTemplate = _.template(
-        $("#nutrition-template").html()
-      );
-
+      var nutritionTemplate = _.template($("#nutrition-template").html());
       var nutritionData = data
-
-      $("#nutrition-facts-label").html(
-        nutritionTemplate( nutritionData )
-      );
+      $("#nutrition-facts-label").html(nutritionTemplate(nutritionData));
 
       $("#commodity-name").html(commodityName.charAt(0).toUpperCase() + commodityName.slice(1));
       $("#plu").html(data.plu_no);
@@ -45,49 +40,41 @@ function makeTemplateProcessor($){
                         +data.lower_label[i].units.toString()+
                         "</div></td></tr>"
 
-          $("#nutrition-lower-table tbody").append(tableDiv);
-        };
+        $("#nutrition-lower-table tbody").append(tableDiv);
+      };
   }
 
   function showLocationTemplate(data) {
     showPage("location-data");
+    currentPagePosition = 0;
 
     _.templateSettings.variable = "locationData";
-
-    var locationTemplate = _.template(
-      $("#location-template").html()
-    );
-
+    var locationTemplate = _.template($("#location-template").html());
     var locationData = data;
-
-    $("#location-data").html(
-      locationTemplate(locationData)
-    )};
+    $("#location-data").html(locationTemplate(locationData));
+  }
 
   function showProduceProfile(data) {
     showPage("produce-profile");
+    currentPagePosition = 2;
 
     _.templateSettings.variable = "produceData";
-
-    var produceProfileTemplate = _.template(
-      $("#produce-profile-template").html()
-    );
-
+    var produceProfileTemplate = _.template($("#produce-profile-template").html());
     var produceData = data;
-
-    $("#produce-profile").html(
-      produceProfileTemplate( produceData )
-    )};
+    $("#produce-profile").html(produceProfileTemplate(produceData));
+  }
 
   return {
     showProduceProfile: showProduceProfile,
     showLocationTemplate: showLocationTemplate,
     showNutritionalData: showNutritionalData,
-    showPage: showPage
+    showPage: showPage,
+    currentPagePosition: function(){return currentPagePosition;}
   };
 }
 
 var viewTemplating = makeTemplateProcessor(jQuery);
+var currentProductData;
 
 $(document).on('deviceready', function(){
   var re =/\d+$/;
@@ -95,7 +82,7 @@ $(document).on('deviceready', function(){
   // alert(localScanResult);
   // console.log(localScanResult);
   if(true) {
-    alert(localScanResult);
+    // alert(localScanResult);
     // ajax call with databar result
     var request = $.ajax({
       dataType: "json",
@@ -106,8 +93,8 @@ $(document).on('deviceready', function(){
     request.done( function(response){
       $("body").css("background-image", "none");
       $("#search-form").css("display", "none");
-      console.log(response);
-      console.log("hello");
+      // console.log(response);
+      // console.log("hello");
       currentProductData = response;
       viewTemplating.showNutritionalData(currentProductData);
       // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
@@ -117,7 +104,6 @@ $(document).on('deviceready', function(){
   }
 
   var pagePosition = 1;
-  var currentProductData;
 
   $("#login-button").click(function(e){
     e.preventDefault();

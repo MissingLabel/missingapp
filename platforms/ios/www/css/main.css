@@ -63,7 +63,7 @@ input[type="submit"] {
     margin: 10px 0;
 }
 
-#search-button, #create-button, #create-account-button, #login-button {
+#search-button, #create-button, #create-account-button, #login-button, button {
     background-color: orange;
     border: none;
 /*     border-radius: 10px; */
@@ -433,3 +433,15 @@ outline: 0 none;}
 #location-data {
     display: block;
 }*/
+
+#right-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#left-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
