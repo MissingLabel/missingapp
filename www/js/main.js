@@ -104,35 +104,35 @@ function makeTemplateProcessor($) {
   };
 }
 
-// function makeGeoLocator($){
-//   var currentPosition;
-//   var currentPositionSet = false;
-//   function determineCurrentPosition(){
-//     if (navigator && navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(
-//         function(position) { currentPosition = position; currentPositionSet = true; },
-//         function() { console.log("Failed to get current position"); currentPositionSet = false; }
-//       );
-//     } else {
-//       console.log('Geolocation is not supported');
-//     }
-//   }
+function makeGeoLocator($){
+  var determinedPosition;
+  var haveDeterminedPosition = false;
+  function determineCurrentPosition(){
+    if (navigator && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) { determinedPosition = position; haveDeterminedPosition = true; },
+        function() { console.log("Failed to get current position"); haveDeterminedPosition = false; }
+      );
+    } else {
+      haveDeterminedPosition = false;
+    }
+  }
 
-//   function getCurrentPosition() {
-//     if(currentPositionSet){
-//       return currentPosition;
-//     }else{
-//       return {city: Chicago, state: IL};
-//     }
-//   }
+  function currentPosition() {
+    if(haveDeterminedPosition){
+      return determinedPosition;
+    }else{
+      return {city: "Chicago", state: "IL"};
+    }
+  }
 
-//   return {
-//     getCurrentPosition: getCurrentPosition,
-//     determineCurrentPosition: determineCurrentPosition
-//   };
-// }
+  return {
+    currentPosition: currentPosition,
+    determineCurrentPosition: determineCurrentPosition
+  };
+}
 
-// var geoLocator = makeGeoLocator(jQuery);
+var geoLocator = makeGeoLocator(jQuery);
 var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
 
