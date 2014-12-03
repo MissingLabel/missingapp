@@ -162,7 +162,7 @@
       <script id="location-template" type="text/template" class="template">
         <% if(locationData.farm_name){%>
           <p class="farm-name">Farm name: <%- locationData.farm_name %></p>
-          <p class="farm-location">Farm location: <%- locationData.address %></p>
+          <p class="farm-location">Farm location: <%- locationData.farm_address %></p>
           <p class="estimated-carbon-footprint"><sup>*</sup>Carbon impact: <%-locationData.carbon%>
           <div id="google-map">
             <html>
@@ -176,7 +176,7 @@
             </html>
           </div>
         <% }else{ %>
-          <p class="farm_name">Scan GS1 barcode if available for farm location</p>
+          <p class="farm_name">Scan GS1 barcode if available to determine farm location</p>
         <% }; %>
 
 
@@ -187,9 +187,22 @@
 <!-- GENERAL INFO TEMPLATE-->
       <div id="produce-profile"></div>
       <script id="produce-profile-template" type="text/template" class="template">
-          <h1>Hello World</h1>
-          <div id="organic">Organic: <%- produceData.organic %></div>
-
+          <%if(produceData.organic === "True"){%>
+            <div id="organic">USDA organic: certified</div>
+          <%}else{%>
+            <div id="organic">USDA organic: NOT certified</div>
+          <%}%>
+          <%if(produceData.gmo === "True"){%>
+            <div id="gmo">USDA gmo: yes</div>
+          <%}else{%>
+            <div id="gmo">USDA gmo: NOT gmo</div>
+          <%};%>
+          <%if(produceData.how_store){%>
+            <div id="how-store">Storage: <%-produceData.how_store%></div>
+          <%}%>
+          <%if(produceData.how_store){%>
+            <div id="how-store">Storage: <%-produceData.how_store%></div>
+          <%}%>
       </script>
 
     </div>

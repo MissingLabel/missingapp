@@ -26,6 +26,14 @@ header {
     box-shadow: -1px 5px 25px black;
 }
 
+#farm-map {
+    margin: 0 auto;
+}
+
+#location-data {
+    margin-top: 155px;
+}
+
 .main-content {
     margin: 0;
 }
@@ -421,8 +429,11 @@ outline: 0 none;}
     display: none;
 }
 
-#location-data {
+#location-data, #produce-profile {
+
     display: none;
+    width: 80%;
+    margin: 145px auto 0 auto;
 }
 
 /*#login-form {
@@ -499,3 +510,13 @@ outline: 0 none;}
     right: 0;
     z-index: 1;
 }
+
+.carbon-explanation {
+    postion: fixed;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    padding: 20px;
+    font-size: .7em;
+}
+
