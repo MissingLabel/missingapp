@@ -135,7 +135,7 @@ var currentProductData;
 
 $(document).on('deviceready', function(){
   geoLocator.determineCurrentPosition();
-
+  geoLocator.getCurrentPosition;
 
   var re =/\d+$/;
   var localScanResult = re.exec(window.location);

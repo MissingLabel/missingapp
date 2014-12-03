@@ -67,8 +67,9 @@ function makeTemplateProcessor($) {
     // console.log(longLad);
     // var locationData = $.extend(longLad, data);
     var locationData = data;
-    locationData["geolocation_data"] = longLad;
-    // console.log(locationData);
+    // locationData["geolocation_data"] = longLad;
+    console.log("Location Data:");
+    console.log(locationData);
     $("#location-data").html(locationTemplate(locationData));
   }
 
@@ -101,42 +102,41 @@ function makeTemplateProcessor($) {
   };
 }
 
-function makeGeoLocator($){
-  var currentPosition;
-  var currentPositionSet = false;
-  function determineCurrentPosition(){
-    if (navigator && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function(position) { currentPosition = position; currentPositionSet = true; },
-        function() { console.log("Failed to get current position"); currentPositionSet = false; }
-      );
-    } else {
-      console.log('Geolocation is not supported');
-    }
-  }
+// function makeGeoLocator($){
+//   var currentPosition;
+//   var currentPositionSet = false;
+//   function determineCurrentPosition(){
+//     if (navigator && navigator.geolocation) {
+//       navigator.geolocation.getCurrentPosition(
+//         function(position) { currentPosition = position; currentPositionSet = true; },
+//         function() { console.log("Failed to get current position"); currentPositionSet = false; }
+//       );
+//     } else {
+//       console.log('Geolocation is not supported');
+//     }
+//   }
 
-  function getCurrentPosition() {
-    if(currentPositionSet){
-      return currentPosition;
-    }else{
-      return {city: Chicago, state: IL};
-    }
-  }
+//   function getCurrentPosition() {
+//     if(currentPositionSet){
+//       return currentPosition;
+//     }else{
+//       return {city: Chicago, state: IL};
+//     }
+//   }
 
-  return {
-    getCurrentPosition: getCurrentPosition,
-    determineCurrentPosition: determineCurrentPosition
-  };
-}
+//   return {
+//     getCurrentPosition: getCurrentPosition,
+//     determineCurrentPosition: determineCurrentPosition
+//   };
+// }
 
-var geoLocator = makeGeoLocator(jQuery);
+// var geoLocator = makeGeoLocator(jQuery);
 var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
 
 $(document).on('deviceready', function(){
-  geoLocator.determineCurrentPosition();
-
-
+  // geoLocator.determineCurrentPosition();
+  // alert(position.coords.longitude)
   var re =/\d+$/;
   var localScanResult = re.exec(window.location);
   // alert(localScanResult);
