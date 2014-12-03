@@ -61,6 +61,7 @@ h1 {
     top: -3px;
     text-shadow: 1px 0.7px 3px black;
     letter-spacing: 0.04em;
+    z-index: 90;
 }
 
 .logo img {
@@ -84,7 +85,7 @@ input[type="submit"] {
     margin: 10px 0;
 }
 
-#search-button, #create-button, #create-account-button, #login-button {
+#search-button, #create-button, #create-account-button, #login-button, #scanner {
     background-color: orange;
     border: none;
 /*     border-radius: 10px; */
@@ -404,7 +405,7 @@ th, td {
     display: inline-block;
 }
 
-textarea:focus, #search-button:focus, #login-button:focus, #create-account-button:focus, #create-button:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+textarea:focus, #scanner:focus, #search-button:focus, #login-button:focus, #create-account-button:focus, #create-button:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
 /* border-color: rgba(126, 239, 104, 0.8); */
 /* border-color: rgba(203, 220, 1, 0.8); */
 border-color: rgba(220, 11, 1, 0.8);
@@ -470,7 +471,31 @@ outline: 0 none;}
     left: 1%;
 }
 
-#scanner-button{
-    float: right;
-    margin-right: 5%;
+#scanner {
+    position: fixed;
+    right: 5%;
+    top: 325px;
+/*     float: right;
+    margin-right: 5%; */
+}
+
+#scanner-button {
+    display: none;
+}
+
+.scan-plu-button img {
+    display: none;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    height: 50px;
+}
+
+.scan-plu-button {
+    width: 200px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
