@@ -79,6 +79,8 @@ function makeTemplateProcessor($) {
 
     _.templateSettings.variable = "produceData";
     var produceProfileTemplate = _.template($("#produce-profile-template").html());
+    console.log("produceData in ProduceProfile: ");
+    console.log(produceData);
     var produceData = data;
     $("#produce-profile").html(produceProfileTemplate(produceData));
   }
@@ -247,15 +249,19 @@ $(document).on('deviceready', function(){
 
   $("#scan-plu").click(function(e){
     e.preventDefault();
+
     $("#scan-plu").css("display", "none");
     $("#nutrition-facts-label").css("display", "none");
     $("#name-plu").css("display", "none");
     $("#swipe-buttons").css("display", "none");
+    $("#location-data").css("display", "none");
+    $("#produce-profile").css("display", "none");
     // $("#right-button").css("display", "none");
     // viewTemplating.showPluSearch(currentProductData);
     $("body").css("background-image", "url('../img/missing-label-veggie-backdrop.jpg')");
     $("#search-form").css("display", "block");
     $("#scanner-button").css("display", "block");
+    $("#search-form #input-field").val("");
   });
 
   $("#left-button").click(function(e){
@@ -280,7 +286,10 @@ $(document).on('deviceready', function(){
       // pagePosition += 1;
       $("#nutrition-facts-label").css("display", "none");
       $("#right-button").css("display", "none");
+      console.log("currentProductData in #right-button event");
+      console.log(currentProductData);
       viewTemplating.showProduceProfile(currentProductData);
+
     }else{
       // pagePosition +=1;
       viewTemplating.showNutritionalData(currentProductData);
