@@ -1,4 +1,4 @@
-function makeTemplateProcessor($){
+function makeTemplateProcessor($) {
   var currentPagePosition = 1;
 
   function showPage(page){
@@ -44,13 +44,33 @@ function makeTemplateProcessor($){
       };
   }
 
+function initGeolocation() {
+ if (navigator && navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+            console.log('Geolocation is not supported');
+        }
+}
+
+function errorCallback() {
+
+}
+
+function successCallback(position) {
+      return position
+    }
+
   function showLocationTemplate(data) {
     showPage("location-data");
     currentPagePosition = 0;
 
     _.templateSettings.variable = "locationData";
+    // var longLad = initGeolocation();
     var locationTemplate = _.template($("#location-template").html());
+    // console.log(longLad);
+    // var locationData = $.extend(longLad, data);
     var locationData = data;
+    // console.log(locationData);
     $("#location-data").html(locationTemplate(locationData));
   }
 
@@ -77,6 +97,11 @@ var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
 
 $(document).on('deviceready', function(){
+
+
+
+
+
   var re =/\d+$/;
   var localScanResult = re.exec(window.location);
   // alert(localScanResult);

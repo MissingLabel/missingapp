@@ -27,7 +27,7 @@
 <body id="body">
   <div class="container">
     <header>
-      <a href="/index.html" class="logo">Missing Label</a>
+      <a href="/index.html" class="logo"><img src="../img/missing-logo.png"></a>
     </header>
 
     <div class="main-content">
@@ -149,10 +149,10 @@
 
       </script>
 
-      <form id="swipe-buttons" action="" method="GET">
-        <button id="left-button" name="swipe-left" type="submit" value="swipe-left">Left</button>
-        <button id="right-button" name="swipe-right" type="submit" value="swipe-right">Right</button>
-      </form>
+      <div id="swipe-buttons">
+        <div id="left-button"><img src="../img/left-arrow.png"></div>
+        <div id="right-button"><img src="../img/right-arrow.png"></div>
+      </div>
 
 <!-- LOCATION TEMPLATE-->
       <div id="location-data"></div>
@@ -169,7 +169,7 @@
               width="600"
               height="450"
               frameborder="0" style="border:0"
-              <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Chicago+IL&destination=<%-locationData.farm_geo_location%>">>
+              <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=Naperville+IL">>
             </iframe>
         </html>
 
