@@ -68,6 +68,7 @@
 		8311E1FB9F1742469816F275 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4C6B60C194752A73FD8ED /* libiconv.dylib */; };
 		AE7E2FF09BC842089B5A6F21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D9BB1B9E6B4029B0AD9503 /* libz.dylib */; };
 		B85F74DEA00447ADACED7583 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7C82486594D43AF18A986 /* libc++.dylib */; };
+		4BB21068729A41E2A2BBC2BD /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9825B08F6154323846AA80E /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,8 @@
 		85C4C6B60C194752A73FD8ED /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libiconv.dylib"; path = "usr/lib/libiconv.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 		56D9BB1B9E6B4029B0AD9503 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 		86B7C82486594D43AF18A986 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		F9825B08F6154323846AA80E /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B508D8B789B642529E026414 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +309,8 @@
 				45B7EB2608A249C8B72F8A3C /* ScanditSDKOverlayController.h */,
 				BE9F87CB756C4D67BD92EB11 /* ScanditSDK.h */,
 				8FF59D6D963143818A88E2F3 /* ScanditSDKRotatingBarcodePicker.h */,
+				F9825B08F6154323846AA80E /* CDVLocation.m */,
+				B508D8B789B642529E026414 /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = MissingLabel/Plugins;
@@ -513,6 +518,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				0896E6A979A04102BAFF5B1A /* ScanditSDK.mm in Resources */,
 				92FAC68F184149359670B22C /* ScanditSDKRotatingBarcodePicker.m in Sources */,
+				4BB21068729A41E2A2BBC2BD /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
