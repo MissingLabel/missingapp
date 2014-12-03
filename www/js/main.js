@@ -1,5 +1,5 @@
 function makeTemplateProcessor($) {
-  // var currentPagePosition = 1;
+  var currentPagePosition = 1;
 
   function showPage(page){
       $("#search-form").css("display", "none");
@@ -47,20 +47,14 @@ function makeTemplateProcessor($) {
       };
   }
 
-  function initGeolocation() {
-    if (navigator && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-    } else {
-      console.log('Geolocation is not supported');
-    }
-  }
+
 
   function errorCallback() {
 
   }
 
   function successCallback(position) {
-    return position
+    return position;
   }
 
   function showLocationTemplate(data) {
@@ -73,6 +67,7 @@ function makeTemplateProcessor($) {
     // console.log(longLad);
     // var locationData = $.extend(longLad, data);
     var locationData = data;
+    locationData["geolocation_data"] = longLad;
     // console.log(locationData);
     $("#location-data").html(locationTemplate(locationData));
   }
@@ -106,12 +101,40 @@ function makeTemplateProcessor($) {
   };
 }
 
+function makeGeoLocator($){
+  var currentPosition;
+  var currentPositionSet = false;
+  function determineCurrentPosition(){
+    if (navigator && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) { currentPosition = position; currentPositionSet = true; },
+        function() { console.log("Failed to get current position"); currentPositionSet = false; }
+      );
+    } else {
+      console.log('Geolocation is not supported');
+    }
+  }
+
+  function getCurrentPosition() {
+    if(currentPositionSet){
+      return currentPosition;
+    }else{
+      return {city: Chicago, state: IL};
+    }
+  }
+
+  return {
+    getCurrentPosition: getCurrentPosition,
+    determineCurrentPosition: determineCurrentPosition
+  };
+}
+
+var geoLocator = makeGeoLocator(jQuery);
 var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
-var currentPagePosition = 1;
 
 $(document).on('deviceready', function(){
-
+  geoLocator.determineCurrentPosition();
 
 
   var re =/\d+$/;
@@ -238,7 +261,7 @@ $(document).on('deviceready', function(){
   $("#left-button").click(function(e){
     e.preventDefault();
     $("#right-button").css("display", "block");
-    if(currentPagePosition === 1) {
+    if(viewTemplating.currentPagePosition() === 1) {
       // pagePosition -=1;
       $("#nutrition-facts-label").css("display", "none");
       $("#left-button").css("display", "none");
@@ -253,7 +276,7 @@ $(document).on('deviceready', function(){
   $("#right-button").click(function(e){
     e.preventDefault();
     $("#left-button").css("display", "block");
-    if(currentPagePosition === 1){
+    if(viewTemplating.currentPagePosition() === 1){
       // pagePosition += 1;
       $("#nutrition-facts-label").css("display", "none");
       $("#right-button").css("display", "none");

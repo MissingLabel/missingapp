@@ -19,7 +19,7 @@ header {
     top: 0;
     left: 0;
     background-color: #323232;
-    height: 60px;
+    height: 70px;
     width: 100%;
     z-index: 900;
     -webkit-appearance: none;
@@ -42,7 +42,7 @@ h1 {
 /*     background-color: #768002; */
     position: relative;
 /*    top: -50px;*/
-    top: -50px;
+    top: -30px;
 /*     box-shadow: 2px 2px 15px black; */
     padding-bottom: 150px;
 
@@ -58,7 +58,7 @@ h1 {
     position: fixed;
     /*top: -70px;*/
     height: 50px;
-    top: -3px;
+    top: 12px;
     text-shadow: 1px 0.7px 3px black;
     letter-spacing: 0.04em;
     z-index: 90;
@@ -486,14 +486,14 @@ outline: 0 none;}
 .scan-plu-button img {
     display: none;
     position: fixed;
-    top: 5px;
+    top: 20px;
     right: 10px;
-    height: 50px;
+    height: 45px;
 }
 
 .scan-plu-button {
     width: 200px;
-    height: 60px;
+    height: 70px;
     position: fixed;
     top: 0;
     right: 0;
