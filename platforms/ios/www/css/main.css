@@ -14,6 +14,22 @@ body {
     background-repeat: none;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #323232;
+    height: 70px;
+    width: 100%;
+    z-index: 900;
+    -webkit-appearance: none;
+    box-shadow: -1px 5px 25px black;
+}
+
+.main-content {
+    margin: 0;
+}
+
 h1 {
     font-size: 2em;
 }
@@ -24,9 +40,9 @@ h1 {
     margin: 0 auto;
     height: auto;
 /*     background-color: #768002; */
-/*     position: relative; */
+    position: relative;
 /*    top: -50px;*/
-    top: -50px;
+    top: -30px;
 /*     box-shadow: 2px 2px 15px black; */
     padding-bottom: 150px;
 
@@ -38,17 +54,23 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     padding: 20px;
-    margin-top: 20px;
+/*     margin-top: 20px; */
     position: fixed;
     /*top: -70px;*/
-    top: -10px;
+    height: 50px;
+    top: 12px;
     text-shadow: 1px 0.7px 3px black;
     letter-spacing: 0.04em;
+    z-index: 90;
 }
 
-form {
+.logo img {
+    height: 25px;
+}
+
+#login-form, #signup-form, #search-form {
     position: relative;
-    top: 125px;
+    top: 90px;
     width: 90%;
     margin: 50px auto;
 }
@@ -63,7 +85,7 @@ input[type="submit"] {
     margin: 10px 0;
 }
 
-#search-button, #create-button, #create-account-button, #login-button, button {
+#search-button, #create-button, #create-account-button, #login-button, #scanner {
     background-color: orange;
     border: none;
 /*     border-radius: 10px; */
@@ -383,7 +405,7 @@ th, td {
     display: inline-block;
 }
 
-textarea:focus, #search-button:focus, #login-button:focus, #create-account-button:focus, #create-button:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+textarea:focus, #scanner:focus, #search-button:focus, #login-button:focus, #create-account-button:focus, #create-button:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
 /* border-color: rgba(126, 239, 104, 0.8); */
 /* border-color: rgba(203, 220, 1, 0.8); */
 border-color: rgba(220, 11, 1, 0.8);
@@ -435,19 +457,45 @@ outline: 0 none;}
     display: block;
 }*/
 
-#right-button {
+#right-button img {
+    height: 50px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 225px;
+    right: 1%;
 }
 
-#left-button {
+#left-button img {
+    height: 50px;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    top: 225px;
+    left: 1%;
 }
 
-#scanner-button{
-    float: right;
-    margin-right: 5%;
+#scanner {
+    position: fixed;
+    right: 5%;
+    top: 325px;
+/*     float: right;
+    margin-right: 5%; */
+}
+
+#scanner-button {
+    display: none;
+}
+
+.scan-plu-button img {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    height: 45px;
+}
+
+.scan-plu-button {
+    width: 200px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }

@@ -27,7 +27,8 @@
 <body id="body">
   <div class="container">
     <header>
-      <a href="/index.html" class="logo">Missing Label</a>
+      <a href="/index.html" class="logo"><img src="img/missing-logo.png"></a>
+      <a id="scan-plu" class="scan-plu-button"><img src="img/scanner-button.png"></a>
     </header>
 
     <div class="main-content">
@@ -63,14 +64,15 @@
       </form>
 
 <!-- SEARCH FORM -->
+      <div id="plu-search"></div>
 
-      <form id="search-form" action="" method="GET">
-        <input id="input-field" type="text" placeholder="Enter PLU or scan an item">
-        <button id="search-button" name="search" type="submit" value="Search">Search</button>
-      </form>
-      <form id="scanner-button" action="scan.html" method="GET">
-        <button id="scanner">scan</button>
-      </form>
+        <form id="search-form" action="" method="GET">
+          <input id="input-field" type="text" placeholder="Enter PLU or scan an item">
+          <button id="search-button" name="search" type="submit" value="Search">Search</button>
+        </form>
+        <form id="scanner-button" action="scan.html" method="GET">
+          <button id="scanner">Scan</button>
+        </form>
 
 
 <!-- NUTRITION FACTS LABEL TEMPLATE-->
@@ -149,10 +151,10 @@
 
       </script>
 
-      <form id="swipe-buttons" action="" method="GET">
-        <button id="left-button" name="swipe-left" type="submit" value="swipe-left">Left</button>
-        <button id="right-button" name="swipe-right" type="submit" value="swipe-right">Right</button>
-      </form>
+      <div id="swipe-buttons">
+        <div id="left-button"><img src="img/left-arrow.png"></div>
+        <div id="right-button"><img src="img/right-arrow.png"></div>
+      </div>
 
 <!-- LOCATION TEMPLATE-->
       <div id="location-data"></div>
@@ -169,7 +171,6 @@
               width="600"
               height="450"
               frameborder="0" style="border:0"
-              // <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=<%-locationData.position.coords.latitude%>+<%-locationData.position.coords.longitude%>&destination=<%-locationData.farm_geo_location%>">>
               <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=Naperville+IL">>
             </iframe>
         </html>

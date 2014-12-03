@@ -8,6 +8,7 @@ function makeTemplateProcessor($) {
       $("#create-form").css("display", "none");
       $("#location-data").css("display", "none");
       $("#produce-profile").css("display", "none");
+      $("#plu-search").css("display", "none");
       $("#" + page).css("display", "block");
   };
 
@@ -15,8 +16,10 @@ function makeTemplateProcessor($) {
       showPage("nutrition-facts-label");
       currentPagePosition = 1;
       $("#swipe-buttons").css("display", "block");
+      $("#scan-plu").css("display", "block");
       $("body").css("background-image", "none");
-      $(".logo").css("top", "-20px");
+      $("#scanner-button").css("display", "none");
+      // $(".logo").css("top", "-20px");
 
       var commodityName = data.name;
 
@@ -44,32 +47,27 @@ function makeTemplateProcessor($) {
       };
   }
 
-function initGeolocation() {
- if (navigator && navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-        } else {
-            console.log('Geolocation is not supported');
-        }
-}
 
-function errorCallback() {
 
-}
+  function errorCallback() {
 
-function successCallback(position) {
-      return position
-    }
+  }
+
+  function successCallback(position) {
+    return position;
+  }
 
   function showLocationTemplate(data) {
     showPage("location-data");
     currentPagePosition = 0;
-
+    console.log("currentPagePosition = "+currentPagePosition);
     _.templateSettings.variable = "locationData";
     // var longLad = initGeolocation();
     var locationTemplate = _.template($("#location-template").html());
     // console.log(longLad);
     // var locationData = $.extend(longLad, data);
     var locationData = data;
+    locationData["geolocation_data"] = longLad;
     // console.log(locationData);
     $("#location-data").html(locationTemplate(locationData));
   }
@@ -84,7 +82,17 @@ function successCallback(position) {
     $("#produce-profile").html(produceProfileTemplate(produceData));
   }
 
+  function showPluSearch(data) {
+    showPage("plu-search")
+
+    _.templateSettings.variable = "searchData"
+    var pluSearchTemplate = _.template($("#plu-search-template").html());
+    var searchData = data;
+    $("#plu-search").html(pluSearchTemplate());
+  }
+
   return {
+    showPluSearch: showPluSearch,
     showProduceProfile: showProduceProfile,
     showLocationTemplate: showLocationTemplate,
     showNutritionalData: showNutritionalData,
@@ -93,20 +101,47 @@ function successCallback(position) {
   };
 }
 
+function makeGeoLocator($){
+  var currentPosition;
+  var currentPositionSet = false;
+  function determineCurrentPosition(){
+    if (navigator && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) { currentPosition = position; currentPositionSet = true; },
+        function() { console.log("Failed to get current position"); currentPositionSet = false; }
+      );
+    } else {
+      console.log('Geolocation is not supported');
+    }
+  }
+
+  function getCurrentPosition() {
+    if(currentPositionSet){
+      return currentPosition;
+    }else{
+      return {city: Chicago, state: IL};
+    }
+  }
+
+  return {
+    getCurrentPosition: getCurrentPosition,
+    determineCurrentPosition: determineCurrentPosition
+  };
+}
+
+var geoLocator = makeGeoLocator(jQuery);
 var viewTemplating = makeTemplateProcessor(jQuery);
 var currentProductData;
 
 $(document).on('deviceready', function(){
-
-
-
+  geoLocator.determineCurrentPosition();
 
 
   var re =/\d+$/;
   var localScanResult = re.exec(window.location);
   // alert(localScanResult);
   // console.log(localScanResult);
-  if(true) {
+  if(localScanResult) {
     // alert(localScanResult);
     // ajax call with databar result
     var request = $.ajax({
@@ -122,13 +157,13 @@ $(document).on('deviceready', function(){
       // console.log("hello");
       currentProductData = response;
       viewTemplating.showNutritionalData(currentProductData);
-      // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
-      $("#google-map").append(googleMapHTML);
+      // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin="+locationData.farm_geo_location+"&destination=Chicago+IL'>></iframe></html>";
+      // $("#google-map").append(googleMapHTML);
 
     });
   }
 
-  var pagePosition = 1;
+
 
   $("#login-button").click(function(e){
     e.preventDefault();
@@ -147,6 +182,9 @@ $(document).on('deviceready', function(){
         $("#login-form").css("display", "none");
         $("#create-form").css("display", "none");
         $("#search-form").css("display", "block");
+        $("#scanner-button").css("display", "block");
+
+        // viewTemplating.showPluSearch(currentProductData);
       } else {
         alert("Please try again");
       }
@@ -196,46 +234,56 @@ $(document).on('deviceready', function(){
     request.done( function(response){
       $("body").css("background-image", "none");
       $("#search-form").css("display", "none");
+      $(".scan-plu-button img").css("display", "block");
       console.log(response);
       console.log("hello");
       currentProductData = response;
       viewTemplating.showNutritionalData(currentProductData);
+
       // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
       $("#google-map").append(googleMapHTML);
     });
   });
 
-
+  $("#scan-plu").click(function(e){
+    e.preventDefault();
+    $("#scan-plu").css("display", "none");
+    $("#nutrition-facts-label").css("display", "none");
+    $("#name-plu").css("display", "none");
+    $("#swipe-buttons").css("display", "none");
+    // $("#right-button").css("display", "none");
+    // viewTemplating.showPluSearch(currentProductData);
+    $("body").css("background-image", "url('../img/missing-label-veggie-backdrop.jpg')");
+    $("#search-form").css("display", "block");
+    $("#scanner-button").css("display", "block");
+  });
 
   $("#left-button").click(function(e){
     e.preventDefault();
-    if(pagePosition === 1) {
-      pagePosition -=1;
+    $("#right-button").css("display", "block");
+    if(viewTemplating.currentPagePosition() === 1) {
+      // pagePosition -=1;
       $("#nutrition-facts-label").css("display", "none");
       $("#left-button").css("display", "none");
       console.log(currentProductData);
       viewTemplating.showLocationTemplate(currentProductData);
     }else{
-      pagePosition -=1;
-      $("#right-button").css("display", "block");
+      // pagePosition -=1;
       viewTemplating.showNutritionalData(currentProductData);
     };
-
-    });
+  });
 
   $("#right-button").click(function(e){
     e.preventDefault();
-    if(pagePosition === 1){
-      pagePosition += 1;
-    $("#nutrition-facts-label").css("display", "none");
-    $("#right-button").css("display", "none");
-    viewTemplating.showProduceProfile(currentProductData);
-  }else{
-    pagePosition +=1;
     $("#left-button").css("display", "block");
-    viewTemplating.showNutritionalData(currentProductData);
-  };
-
+    if(viewTemplating.currentPagePosition() === 1){
+      // pagePosition += 1;
+      $("#nutrition-facts-label").css("display", "none");
+      $("#right-button").css("display", "none");
+      viewTemplating.showProduceProfile(currentProductData);
+    }else{
+      // pagePosition +=1;
+      viewTemplating.showNutritionalData(currentProductData);
+    };
   });
-
 });

@@ -10,7 +10,7 @@ $(document).on('deviceready', function(){
       viewTemplating.showNutritionalData(currentProductData);
     }
   }).on('swiperight', function() {
-    if(viewTemplating.currentPagePosition() === 1){
+  if(viewTemplating.currentPagePosition() === 1){
       $("#right-button").css("display", "none");
       viewTemplating.showProduceProfile(currentProductData);
     }else{
