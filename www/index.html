@@ -171,7 +171,7 @@
                   width=100%
                   height="175"
                   frameborder="0" style="border:0"
-                  <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=Naperville+IL">>
+                  <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=<%-locationData.farm_geo_location%>">>
                 </iframe>
             </html>
           </div>
@@ -197,8 +197,8 @@
           <%}else{%>
             <div id="gmo">USDA gmo: NOT gmo</div>
           <%};%>
-          <%if(produceData.how_store){%>
-            <div id="how-store">Storage: <%-produceData.how_store%></div>
+          <%if(produceData.how_pick){%>
+            <div id="how-store">Storage: <%-produceData.how_pick%></div>
           <%}%>
           <%if(produceData.how_store){%>
             <div id="how-store">Storage: <%-produceData.how_store%></div>
@@ -212,4 +212,5 @@
 </body>
 
 </html>
+<!-- test comment -->
 
