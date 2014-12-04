@@ -148,7 +148,7 @@ $(document).on('deviceready', function(){
     // ajax call with databar result
     var request = $.ajax({
       dataType: "json",
-      url: "https://vast-cliffs-6881.herokuapp.com/items/" + localScanResult,
+      url: "https://missinglabel.herokuapp.com/items/" + localScanResult,
       type: "GET"
     });
 
@@ -173,7 +173,7 @@ $(document).on('deviceready', function(){
     var loginInput = $("#password-input").val();
     var request = $.ajax({
       dataType: "json",
-      url: "https://vast-cliffs-6881.herokuapp.com/login",
+      url: "https://missinglabel.herokuapp.com/login",
       data: {email: emailInput, password: loginInput},
       type: "POST"
     })
@@ -208,7 +208,7 @@ $(document).on('deviceready', function(){
 
     var request = $.ajax({
       dataType: "json",
-      url: "https://vast-cliffs-6881.herokuapp.com/users",
+      url: "https://missinglabel.herokuapp.com/users",
       data: {email: emailInput, email: loginInput},
       type: "POST"
     })
@@ -229,7 +229,7 @@ $(document).on('deviceready', function(){
     console.log(input);
     var request = $.ajax({
       dataType: "json",
-      url: "https://vast-cliffs-6881.herokuapp.com/items/" + input,
+      url: "https://missinglabel.herokuapp.com/items/" + input,
       type: "GET"
     })
 
