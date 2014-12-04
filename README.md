@@ -3,7 +3,7 @@ MissingLabel
 App:
 [Heroku App](https://missinglabel.herokuapp.com/)
 
-^^^^ This site just shows a list, rather than a view of your app. You might want to put a simple page up.
+This site just shows a list, rather than a view of your app. You might want to put a simple page up.
 
 Synopsis
 ===========
