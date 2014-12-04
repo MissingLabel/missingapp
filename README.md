@@ -15,7 +15,9 @@ MISSINGlabel is a project that involves a native iOS front-end that communicates
 Motivation
 ===========
 
-The inspiration for this project came from a widespread and shared problem set surrounding the modern grocery store shopping experience. Shoppers are typically estranged from the logistical history, production processes, and in depth info regarding nutritional content of the food they consume. This is especially true for unpackaged fruits and vegetables. The goal of MISSINGlabel is to serve as an efficient interface for discerning what has been a previously decentralized data set.   As a team, we are passionate about this problem and strive to balance the informing of the user with the reality of time constraints in the already present cadence of navigating a grocery store.
+The inspiration for this project came from a widespread and shared problem present in the modern grocery store shopping experience. Shoppers are typically estranged from the logistical history, production processes, and in depth info regarding nutritional content of the food they consume. This is especially true for unpackaged fruits and vegetables. MISSINGlabel serves as an efficient interface for discerning what has been a previously decentralized data set.
+
+As a team, we are passionate about this problem and strive to balance the informing of the user with the reality of time constraints in the already present cadence of navigating a grocery store.
 
 API Reference
 ===========
