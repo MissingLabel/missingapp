@@ -33,10 +33,6 @@ John Williams: [@john335](https://github.com/johnw335)
 
 Gale Van Rossem: [@GaleForceVR](https://github.com/GaleForceVR)
 
-Trello Board:
-[Trello Board](https://trello.com/b/6TTmZd4R/missing-label)
-
-
 License
 ===========
 MIT
