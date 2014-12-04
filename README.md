@@ -15,8 +15,9 @@ The inspiration for this project came from a widespread and shared problem set s
 API Reference
 ===========
 
-Our current Rails API obtains nutrition data from the USDA. The farm locations are represented as a response from the Google maps API. Additional food data has been mocked to represent expected available data from GS1 in 2015. We have contacted representatives from GS1 and
-[back end repo](https://github.com/MissingLabel/backend)
+Our current Rails API obtains nutrition data from the USDA. The farm locations are represented as a response from the Google maps API. Additional food data has been mocked to represent expected available data from GS1 in 2015. We have contacted representatives from GS1 to ensure the format of this expected information in order to create an app that would accomodate a simple transition to live data. 
+
+[Backend repo](https://github.com/MissingLabel/backend)
 
 Tests
 ===========
