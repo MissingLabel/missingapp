@@ -1,6 +1,7 @@
 MissingLabel
 ==========
-[App](https://missinglabel.herokuapp.com/)
+App:
+[Heroku App](https://missinglabel.herokuapp.com/)
 
 Synopsis
 ===========
