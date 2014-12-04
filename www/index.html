@@ -161,9 +161,12 @@
 
       <script id="location-template" type="text/template" class="template">
         <% if(locationData.farm_name){%>
-          <p class="farm-name">Farm name: <%- locationData.farm_name %></p>
-          <p class="farm-location">Farm location: <%- locationData.farm_address %></p>
-          <p class="estimated-carbon-footprint"><sup>*</sup>Carbon impact: <%-locationData.carbon%>
+          <p class="farm-name">Farm name:</p>
+          <p class="farm-name-response"><%- locationData.farm_name %></p>
+          <p class="farm-location">Farm location:</p>
+          <p class="farm-location-response"><%- locationData.farm_address %></p>
+          <p class="estimated-carbon-footprint"><sup>*</sup>Carbon impact:</p>
+          <p class="estimated-carbon-footprint-response"><%-locationData.carbon%></p>
           <div id="google-map">
             <html>
                 <iframe
@@ -184,25 +187,36 @@
 
       </script>
 
-<!-- GENERAL INFO TEMPLATE-->
+<!-- PRODUCE PROFILE TEMPLATE-->
       <div id="produce-profile"></div>
       <script id="produce-profile-template" type="text/template" class="template">
           <%if(produceData.organic === "True"){%>
-            <div id="organic">USDA organic: certified</div>
+            <p class="organic">USDA organic: </p>
+            <p class="organic-response-positive">certified</p>
           <%}else{%>
-            <div id="organic">USDA organic: NOT certified</div>
+            <p class="organic">USDA organic: </p>
+            <p class="organic-response-negative">NOT certified</p>
           <%}%>
           <%if(produceData.gmo === "True"){%>
-            <div id="gmo">USDA gmo: yes</div>
+            <p class="gmo">USDA gmo: </p>
+            <p class="gmo-response-positive">yes</p>
           <%}else{%>
-            <div id="gmo">USDA gmo: NOT gmo</div>
+            <p class="gmo">USDA gmo: </p>
+            <p class="gmo-response-negative">NOT gmo</p>
           <%};%>
+          <%if(produceData.seasons){%>
+            <p class="seasons">Seasons: </p>
+            <p class="seasons-response"><%-produceData.seasons%></p>
+          <%}%>
           <%if(produceData.how_pick){%>
-            <div id="how-store">Storage: <%-produceData.how_pick%></div>
+            <p class="how-pick">How to Select: </p>
+            <p class="how-pick-response"><%-produceData.how_pick%></p>
           <%}%>
           <%if(produceData.how_store){%>
-            <div id="how-store">Storage: <%-produceData.how_store%></div>
+            <p class="how-store">Storage: </p>
+            <p class="how-store-response"><%-produceData.how_store%></p>
           <%}%>
+
       </script>
 
     </div>
