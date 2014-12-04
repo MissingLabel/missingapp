@@ -18,11 +18,11 @@ API Reference
 Our current Rails API obtains nutrition data from the USDA. The farm locations are represented as a response from the Google maps API. Additional food data has been mocked to represent expected available data from GS1 in 2015. We have contacted representatives from GS1 and
 [back end repo](https://github.com/MissingLabel/backend)
 
-## Tests
+Tests
 ===========
 Tests for our backend API utilize the Rspec testing suite and envelop models/controllers.
 
-## Authors
+Authors
 ===========
 Shreya Patel: [@shreya317](https://github.com/shreya317)
 
@@ -36,6 +36,6 @@ Trello Board:
 [Trello Board](https://trello.com/b/6TTmZd4R/missing-label)
 
 
-## License
+License
 ===========
 MIT
