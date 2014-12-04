@@ -61,7 +61,7 @@ h1 {
     color: #e4f05d;
     text-decoration: none;
     font-weight: bold;
-    padding: 20px;
+    padding: 5px;
 /*     margin-top: 20px; */
     position: fixed;
     /*top: -70px;*/
@@ -73,7 +73,7 @@ h1 {
 }
 
 .logo img {
-    height: 25px;
+    height: 50px;
 }
 
 #login-form, #signup-form, #search-form {
@@ -532,6 +532,10 @@ outline: 0 none;}
     letter-spacing: 0.04em;
 }
 
+.estimated-carbon-footprint {
+    display: none;
+}
+
 .organic-response, .gmo-response, .seasons-response, .seasons-response, .how-pick-response, .how-store-response, .chemicals-response, .farm-name-response, .farm-location-response, .estimated-carbon-footprint-response {
     font-size: 1.3em;
     padding-bottom: 10px;
@@ -543,7 +547,7 @@ outline: 0 none;}
     font-size: 1.3em;
     padding-bottom: 10px;
     margin-left: 15px;
-/*     text-shadow: 0.7px 0.7px 0.8px black; */
+    text-shadow: 0.7px 0.7px 1.5px black;
 }
 
 .organic-response-negative, .gmo-response-negative, .chemicals-response-negative {

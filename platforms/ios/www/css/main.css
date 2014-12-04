@@ -61,7 +61,7 @@ h1 {
     color: #e4f05d;
     text-decoration: none;
     font-weight: bold;
-    padding: 20px;
+    padding: 5px;
 /*     margin-top: 20px; */
     position: fixed;
     /*top: -70px;*/
@@ -73,7 +73,7 @@ h1 {
 }
 
 .logo img {
-    height: 25px;
+    height: 50px;
 }
 
 #login-form, #signup-form, #search-form {
@@ -422,7 +422,7 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(203, 220, 1, 0.6)
 outline: 0 none;}
 
 #search-form {
-    display: none;
+    display: block;
 }
 
 #swipe-buttons {
@@ -436,13 +436,13 @@ outline: 0 none;}
     margin: 145px auto 0 auto;
 }
 
-/*#login-form {
+#login-form {
     display: none;
-}*/
+}
 
-/*#create-form {
+#create-form {
     display: none;
-}*/
+}
 
 /*body[orient="landscape"] {
     body {
@@ -491,7 +491,7 @@ outline: 0 none;}
 }
 
 #scanner-button {
-    display: none;
+    display: block;
 }
 
 .scan-plu-button img {
@@ -513,10 +513,47 @@ outline: 0 none;}
 
 .carbon-explanation {
     postion: fixed;
+    color: #363b00;
     left: 0;
     bottom: 0;
     width: 80%;
     padding: 20px;
     font-size: .7em;
+    text-shadow: 1px 0.7px 1px #9ca535;
+    letter-spacing: 0.04em;
+    display: none;
 }
 
+.organic, .gmo, .seasons, .seasons, .how-pick, .how-store, .chemicals, .farm-name, .farm-location, .estimated-carbon-footprint {
+    color: #363b00;
+    font-size: 1.2em;
+    padding-bottom: 3px;
+    text-shadow: 1px 0.7px 1px #9ca535;
+    letter-spacing: 0.04em;
+}
+
+.estimated-carbon-footprint {
+    display: none;
+}
+
+.organic-response, .gmo-response, .seasons-response, .seasons-response, .how-pick-response, .how-store-response, .chemicals-response, .farm-name-response, .farm-location-response, .estimated-carbon-footprint-response {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    margin-left: 15px;
+}
+
+.organic-response-positive, .gmo-response-positive, .chemicals-response-positive {
+    color: #c2d301;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    text-shadow: 0.7px 0.7px 1.5px black;
+}
+
+.organic-response-negative, .gmo-response-negative, .chemicals-response-negative {
+    color: #fc0202;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    text-shadow: 0.7px 0.7px 1.5px black;
+}

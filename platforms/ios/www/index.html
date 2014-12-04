@@ -4,7 +4,7 @@
 <title>Missing Label</title>
 <meta name="format-detection" content="telephone=no" />
 <meta name="msapplication-tap-highlight" content="no" />
-
+<link rel="apple-touch-icon" href="img/missing-label-apple-touch-icon.png">
 <link rel="stylesheet" type="text/css" media="all" href="css/vendor/reset.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
@@ -27,7 +27,7 @@
 <body id="body">
   <div class="container">
     <header>
-      <a href="/index.html" class="logo"><img src="img/missing-logo.png"></a>
+      <a href="/index.html" class="logo"><img src="img/missing-label-logo.png"></a>
       <a id="scan-plu" class="scan-plu-button"><img src="img/scanner-button.png"></a>
     </header>
 
@@ -161,17 +161,20 @@
 
       <script id="location-template" type="text/template" class="template">
         <% if(locationData.farm_name){%>
-          <p class="farm-name">Farm name: <%- locationData.farm_name %></p>
-          <p class="farm-location">Farm location: <%- locationData.farm_address %></p>
-          <p class="estimated-carbon-footprint"><sup>*</sup>Carbon impact: <%-locationData.carbon%>
+          <p class="farm-name">Farm name:</p>
+          <p class="farm-name-response"><%- locationData.farm_name %></p>
+          <p class="farm-location">Farm location:</p>
+          <p class="farm-location-response"><%- locationData.farm_address %></p>
+          <p class="estimated-carbon-footprint"><sup>*</sup>Carbon impact:</p>
+          <p class="estimated-carbon-footprint-response"><%-locationData.carbon%></p>
           <div id="google-map">
             <html>
                 <iframe
                   id="farm-map"
                   width=100%
-                  height="175"
+                  height="375"
                   frameborder="0" style="border:0"
-                  <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=Naperville+IL">>
+                  <img src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=Dev+Bootcamp+Chicago+IL+&destination=<%-locationData.farm_geo_location%>">>
                 </iframe>
             </html>
           </div>
@@ -184,25 +187,37 @@
 
       </script>
 
-<!-- GENERAL INFO TEMPLATE-->
+<!-- PRODUCE PROFILE TEMPLATE-->
+
       <div id="produce-profile"></div>
       <script id="produce-profile-template" type="text/template" class="template">
           <%if(produceData.organic === "True"){%>
-            <div id="organic">USDA organic: certified</div>
+            <p class="organic">USDA organic: </p>
+            <p class="organic-response-positive">certified</p>
           <%}else{%>
-            <div id="organic">USDA organic: NOT certified</div>
+            <p class="organic">USDA organic: </p>
+            <p class="organic-response-negative">NOT certified</p>
           <%}%>
           <%if(produceData.gmo === "True"){%>
-            <div id="gmo">USDA gmo: yes</div>
+            <p class="gmo">USDA gmo: </p>
+            <p class="gmo-response-negative">This item is genetically modified</p>
           <%}else{%>
-            <div id="gmo">USDA gmo: NOT gmo</div>
+            <p class="gmo">USDA gmo: </p>
+            <p class="gmo-response-positive">NOT GMO</p>
           <%};%>
-          <%if(produceData.how_store){%>
-            <div id="how-store">Storage: <%-produceData.how_store%></div>
+          <%if(produceData.seasons){%>
+            <p class="seasons">Seasons: </p>
+            <p class="seasons-response"><%-produceData.seasons%></p>
+          <%}%>
+          <%if(produceData.how_pick){%>
+            <p class="how-pick">How to Select: </p>
+            <p class="how-pick-response"><%-produceData.how_pick%></p>
           <%}%>
           <%if(produceData.how_store){%>
-            <div id="how-store">Storage: <%-produceData.how_store%></div>
+            <p class="how-store">Storage: </p>
+            <p class="how-store-response"><%-produceData.how_store%></p>
           <%}%>
+
       </script>
 
     </div>
@@ -212,4 +227,5 @@
 </body>
 
 </html>
+<!-- test comment -->
 
