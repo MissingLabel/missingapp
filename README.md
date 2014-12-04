@@ -44,4 +44,4 @@ Gale Van Rossem: [@GaleForceVR](https://github.com/GaleForceVR)
 
 License
 ===========
-MIT
+Copyright 2014, Missing Label. Please see [LICENSE](LICENSE) file for license information.
