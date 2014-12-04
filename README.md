@@ -30,7 +30,7 @@ The system is built to support retrieving additional food data from GS1's API (p
 
 Tests
 ===========
-Tests for our backend API utilize the Rspec testing suite and envelop models/controllers.
+We used the RSpec testing framework to verify the business logic and functionality of the models and controllers in our system.
 
 Authors
 ===========
