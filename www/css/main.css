@@ -521,25 +521,26 @@ outline: 0 none;}
     font-size: .7em;
     text-shadow: 1px 0.7px 1px #9ca535;
     letter-spacing: 0.04em;
+    display: none;
 }
 
 .organic, .gmo, .seasons, .seasons, .how-pick, .how-store, .chemicals, .farm-name, .farm-location, .estimated-carbon-footprint {
     color: #363b00;
-    font-size: 0.9em;
+    font-size: 1.2em;
     padding-bottom: 3px;
     text-shadow: 1px 0.7px 1px #9ca535;
     letter-spacing: 0.04em;
 }
 
 .organic-response, .gmo-response, .seasons-response, .seasons-response, .how-pick-response, .how-store-response, .chemicals-response, .farm-name-response, .farm-location-response, .estimated-carbon-footprint-response {
-    font-size: 1em;
+    font-size: 1.3em;
     padding-bottom: 10px;
     margin-left: 15px;
 }
 
 .organic-response-positive, .gmo-response-positive, .chemicals-response-positive {
     color: #c2d301;
-    font-size: 1em;
+    font-size: 1.3em;
     padding-bottom: 10px;
     margin-left: 15px;
 /*     text-shadow: 0.7px 0.7px 0.8px black; */
@@ -547,7 +548,7 @@ outline: 0 none;}
 
 .organic-response-negative, .gmo-response-negative, .chemicals-response-negative {
     color: #fc0202;
-    font-size: 1em;
+    font-size: 1.3em;
     padding-bottom: 10px;
     margin-left: 15px;
     text-shadow: 0.7px 0.7px 1.5px black;
