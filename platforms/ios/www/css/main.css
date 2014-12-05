@@ -290,7 +290,8 @@ input[type="text"], input[type="password"] {
     margin-bottom: 6px;
 }
 
-.medium-label-border-short {
+/*.medium-label-border-short {*/
+#nutrition-lower-table {
     min-height: 35px;
     padding-bottom: 0;
     border-bottom: 4px solid black;
@@ -556,4 +557,14 @@ outline: 0 none;}
     padding-bottom: 10px;
     margin-left: 15px;
     text-shadow: 0.7px 0.7px 1.5px black;
+}
+
+.disclaimer {
+    margin-top: 3%;
+    font-size: 0.7em
+}
+
+.sources {
+    margin-top: 3%;
+    font-size: 0.6em
 }
