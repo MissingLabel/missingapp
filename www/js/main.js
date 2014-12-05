@@ -31,7 +31,7 @@ function makeTemplateProcessor($) {
       $("#commodity-name").html(commodityName.charAt(0).toUpperCase() + commodityName.slice(1));
       $("#plu").html(data.plu_no);
 
-      for (var i = 0; data.lower_label.length; i++) {
+      for (var i = 0; i < data.lower_label.length; i++) {
 
         var tableDiv =  "<tr><td id='item-percentage' class='td-left-bottom'>"
                         +data.lower_label[i].per.toString()+
@@ -243,7 +243,7 @@ $(document).on('deviceready', function(){
       viewTemplating.showNutritionalData(currentProductData);
 
       // var googleMapHTML = "<html><iframewidth='600'height='450'frameborder='0' style='border:0'<img src= 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDdZNISuewaFtoSomCNI6eQWF9YdrSJgOU&origin=" + locationData.farm_geo_location + "&destination=Chicago+IL' >></iframe></html>";
-      $("#google-map").append(googleMapHTML);
+      // $("#google-map").append(googleMapHTML);
     });
   });
 
