@@ -38,7 +38,7 @@ Shreya Patel: [@shreya317](https://github.com/shreya317)
 
 Michael Karouzos: [@multiviouskalogram](https://github.com/multiviouskalogram)
 
-John Williams: [@john335](https://github.com/johnw335)
+John Williams: [@johnw335](https://github.com/johnw335)
 
 Gale Van Rossem: [@GaleForceVR](https://github.com/GaleForceVR)
 
